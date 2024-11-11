@@ -48,6 +48,14 @@ public abstract class Player {
             return false;
         }
     }
+    
+    public void addMana(){
+        Mana += 15;
+        
+        if(Mana > MaxMana){
+            Mana = MaxMana;
+        }
+    }
 
     public void takeDamage(int damage){
         Health -= damage;

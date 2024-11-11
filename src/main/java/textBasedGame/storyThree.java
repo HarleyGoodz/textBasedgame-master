@@ -53,7 +53,7 @@ public class storyThree {
             System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
             System.out.println("---------------------------------------");
-            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, +15 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
@@ -76,10 +76,10 @@ public class storyThree {
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
-                        if (character.useMana(10)) {
-                            damage = character.skillOne(); // Random damage between 30 and 40
-                            objAnzu.takeDamage(damage);
-                        }
+                        character.addMana();
+                        damage = character.skillOne(); // Random damage between 30 and 40
+                        objAnzu.takeDamage(damage);
+                        
                         break;
                     case 2:
                         TurnCounter++;
@@ -218,7 +218,7 @@ public class storyThree {
             System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
             System.out.println("---------------------------------------");
-            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, +15 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
@@ -241,10 +241,10 @@ public class storyThree {
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
-                        if (character.useMana(10)) {
-                            damage = character.skillOne(); // Random damage between 30 and 40
-                            objUrma.takeDamage(damage);
-                        }
+                        character.addMana();
+                        damage = character.skillOne(); // Random damage between 30 and 40
+                        objUrma.takeDamage(damage);
+                        
                         break;
                     case 2:
                         TurnCounter++;
@@ -366,7 +366,7 @@ public class storyThree {
             System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
             System.out.println("---------------------------------------");
-            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, +15 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
@@ -389,10 +389,10 @@ public class storyThree {
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
-                        if (character.useMana(10)) {
-                            damage = character.skillOne(); // Random damage between 30 and 40
-                            objHum.takeDamage(damage);
-                        }
+                        character.addMana();
+                        damage = character.skillOne(); // Random damage between 30 and 40
+                        objHum.takeDamage(damage);
+                        
                         break;
                     case 2:
                         TurnCounter++;
@@ -528,7 +528,7 @@ public class storyThree {
             System.out.println("---------------------------------------");
             System.out.println("Choose your action:");
             System.out.println("---------------------------------------");
-            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, +15 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
@@ -551,10 +551,10 @@ public class storyThree {
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
-                        if (character.useMana(10)) {
-                            damage = character.skillOne(); // Random damage between 30 and 40
-                            objTia.takeDamage(damage);
-                        }
+                        character.addMana();
+                        damage = character.skillOne(); // Random damage between 30 and 40
+                        objTia.takeDamage(damage);
+                        
                         break;
                     case 2:
                         TurnCounter++;
