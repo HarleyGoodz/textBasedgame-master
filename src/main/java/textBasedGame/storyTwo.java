@@ -484,6 +484,51 @@ public class storyTwo {
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)
+                    System.out.println("-----------------------------------------------\n");
+                    System.out.println("After defeating the demons that ambushed you,"
+                    + "\n you feel tired and lost in the forest..."
+                    + "\n\npress 'Enter' to continue");
+                    scanner.nextLine();
+        
+                    System.out.println("-----------------------------------------------\n");
+                    System.out.println("As you sat down and lay your head, wanting to take a break but suddenly\n"
+                    + "something weird is coming...."
+                    + "\n\npress 'Enter' to continue");
+                    scanner.nextLine();
+        
+                    System.out.println("------------------AMBUSHED!!!-----------------------------\n");
+                    System.out.println("The Earth began to rumble....\n"
+                    + "Tress began to fall...\n"
+                    + "an ear-splitting scream ripped through the darkness...\n"
+                    + "\n\npress 'Enter' to continue");
+                    scanner.nextLine();
+        
+                    System.out.println("-----------------------------------------------\n");
+                    System.out.println("As you looked up into the heavens...\n"
+                    + "A giant snake appeared!\n"
+                    + "The LEGENDARY Jormungandr!!\n"
+                    + "\n\npress 'Enter' to continue");
+                    scanner.nextLine();
+        
+                    System.out.println("-----------------------------------------------\n");
+                    System.out.println("The colossal serpent lunges forward, its jaws wide open, ready to engulf you in a monstrous,\n"
+                    + " bone-crushing strike!\n"
+                    + "\n\npress 'Enter' to DODGE!!!");
+                    scanner.nextLine();
+        
+                    System.out.println("-----------------------------------------------\n");
+                    System.out.println("You swiftly evade the serpent's vicious lunge, adrenaline surging through your veins like wildfire. \n"
+                    + " The air crackles with tension as you prepare for the clash of a lifetime\n"
+                    + "an epic battle between a colossal, legendary beast and a mere mortal daring to defy fate!\n"
+                    + "\n\npress 'Enter' to continue!!!");
+                    scanner.nextLine();
+        
+                    System.out.println("-------------------PREPARE FOR BATTLE!!!---------------------------\n");
+                    System.out.println("Your draw your weapon, setting your heart to ablaze, eradicating the tiring feeling of the recent battle\n"
+                    + "you have faced!"
+                    + "\n\npress 'Enter' to FIGHT!!!!!");
+                    scanner.nextLine();
+                    
                     break;
                 }
             } catch (Exception e) {
@@ -492,50 +537,6 @@ public class storyTwo {
             }
         }
         
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("After defeating the demons that ambushed you,"
-                + "\n you feel tired and lost in the forest..."
-                + "\n\npress 'Enter' to continue");
-        scanner.nextLine();
-        
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("As you sat down and lay your head, wanting to take a break but suddenly\n"
-                + "something weird is coming...."
-                + "\n\npress 'Enter' to continue");
-        scanner.nextLine();
-        
-        System.out.println("------------------AMBUSHED!!!-----------------------------\n");
-        System.out.println("The Earth began to rumble....\n"
-                + "Tress began to fall...\n"
-                + "an ear-splitting scream ripped through the darkness...\n"
-                + "\n\npress 'Enter' to continue");
-        scanner.nextLine();
-        
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("As you looked up into the heavens...\n"
-                + "A giant snake appeared!\n"
-                + "The LEGENDARY Jormungandr!!\n"
-                + "\n\npress 'Enter' to continue");
-        scanner.nextLine();
-        
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("The colossal serpent lunges forward, its jaws wide open, ready to engulf you in a monstrous,\n"
-                + " bone-crushing strike!\n"
-                + "\n\npress 'Enter' to DODGE!!!");
-        scanner.nextLine();
-        
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("You swiftly evade the serpent's vicious lunge, adrenaline surging through your veins like wildfire. \n"
-                + " The air crackles with tension as you prepare for the clash of a lifetime\n"
-                + "an epic battle between a colossal, legendary beast and a mere mortal daring to defy fate!\n"
-                + "\n\npress 'Enter' to continue!!!");
-        scanner.nextLine();
-        
-        System.out.println("-------------------PREPARE FOR BATTLE!!!---------------------------\n");
-        System.out.println("Your draw your weapon, setting your heart to ablaze, eradicating the tiring feeling of the recent battle\n"
-                + "you have faced!"
-                + "\n\npress 'Enter' to FIGHT!!!!!");
-        scanner.nextLine();
         
         while (objJorm.getHealth() > 0 && character.getHealth() > 0) {
             System.out.println("==================================================");

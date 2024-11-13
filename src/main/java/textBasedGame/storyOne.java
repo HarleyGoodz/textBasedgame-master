@@ -312,6 +312,20 @@ public class storyOne {
                     objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
+                    
+                    System.out.println("------------------------------------------\n");
+                    System.out.println("After killing the 2 demons that blocked your path... \n"
+                    + "you continued at your journey, smelling the scent of a godly power...."
+                    + "\n\nPress Enter to continue");
+                    scanner.nextLine();
+        
+                    System.out.println("------------------ARRIVAL!-----------------------\n");
+                    System.out.println("You have finally arrived at the hellish domain of KREV MALAK!\n"
+                    + "\npress 'Enter' to continue");
+                    scanner.nextLine();
+                    
+                    objKrev.Krev_BackStory();
+                    objKrev.Krev_IncomingBattle();
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -321,19 +335,7 @@ public class storyOne {
             }
         }
         
-        System.out.println("------------------------------------------\n");
-        System.out.println("After killing the 2 demons that blocked your path... \n"
-                + "you continued at your journey, smelling the scent of a godly power...."
-                + "\n\nPress Enter to continue");
-        scanner.nextLine();
         
-        System.out.println("------------------ARRIVAL!-----------------------\n");
-        System.out.println("You have finally arrived at the hellish domain of KREV MALAK!\n"
-                + "\npress 'Enter' to continue");
-        scanner.nextLine();
-             
-        objKrev.Krev_BackStory();
-        objKrev.Krev_IncomingBattle();
     
         while (objKrev.getHealth() > 0 && character.getHealth() > 0) {
             System.out.println("======================================================");

@@ -26,13 +26,13 @@ public class MainGame {
                 System.out.println("            The Walls of the Fallen!");
                 System.out.println("            1. Start");
                 System.out.println("            2. Exit");
-                System.out.println("            Enter your choice!: ");
                 System.out.println("-=-=-=-=-=-=-==-=-=-=-=-=-=-=--=-=-=-=-=-=-==-=-=-=-");
-                
+                System.out.print("            Enter your choice!: ");
                 choice = scan.nextInt();
 
                 if (choice == 1) {
-                    System.out.println("The game has started!\n");
+                    System.out.println();
+                    System.out.println("            The game has started!\n");
                     System.out.println("---------------------------------------");
                     System.out.println();
                     scan.nextLine();

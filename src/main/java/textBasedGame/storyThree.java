@@ -182,6 +182,20 @@ public class storyThree {
                     objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
+                    System.out.println("\n--------------------VICTORY!--------------------------\n");
+                    System.out.println("You have successfully defended yourself, but it's not over yet!");
+                    System.out.println("Press 'Enter' to continue");
+                    scanner.nextLine();
+
+                    System.out.println("----------------------------------------------\n");
+                    System.out.println("As two of the monsters charged infront of you, avenging their ally!");
+                    System.out.println("Press 'Enter' to continue");
+                    scanner.nextLine();
+
+                    System.out.println("----------------------------------------------\n");
+                    System.out.println("Brace yourself! PREPARE FOR BATTLE 2!");
+                    System.out.println("Press 'Enter' to FIGHT");
+                    scanner.nextLine();
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -191,20 +205,6 @@ public class storyThree {
             }
         }
 
-    System.out.println("\n--------------------VICTORY!--------------------------\n");
-    System.out.println("You have successfully defended yourself, but it's not over yet!");
-    System.out.println("Press 'Enter' to continue");
-    scanner.nextLine();
-
-    System.out.println("----------------------------------------------\n");
-    System.out.println("As two of the monsters charged infront of you, avenging their ally!");
-    System.out.println("Press 'Enter' to continue");
-    scanner.nextLine();
-
-    System.out.println("----------------------------------------------\n");
-    System.out.println("Brace yourself! PREPARE FOR BATTLE 2!");
-    System.out.println("Press 'Enter' to FIGHT");
-    scanner.nextLine();
 
         
         
@@ -495,6 +495,18 @@ public class storyThree {
                     objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
+                    System.out.println("\n----------------------------------------------\n");
+                    System.out.println("After defeating those who attempted to trample your path, you managed to prevail on your adventure,\n"+
+                    "you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
+                    System.out.println("\nPress 'Enter' to continue");
+                    scanner.nextLine();
+
+                    System.out.println("----------------------------------------------\n");
+                    System.out.println("After climbing the top of the mountain, the three headed dragon roars showcasing its greatness and power.");
+                    System.out.println("\nPress 'Enter' to continue");
+                    scanner.nextLine();
+                    
+                    objTia.Tiamat_Backstory();
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -504,18 +516,8 @@ public class storyThree {
             }
         }
 
-        System.out.println("\n----------------------------------------------\n");
-    System.out.println("After defeating those who attempted to trample your path, you managed to prevail on your adventure,\n"+
-     "you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
-    System.out.println("\nPress 'Enter' to continue");
-    scanner.nextLine();
 
-    System.out.println("----------------------------------------------\n");
-    System.out.println("After climbing the top of the mountain, the three headed dragon roars showcasing its greatness and power.");
-    System.out.println("\nPress 'Enter' to continue");
-    scanner.nextLine();
 
-    objTia.Tiamat_Backstory();
 
         
          while (objTia.getHealth() > 0 && character.getHealth() > 0) {
