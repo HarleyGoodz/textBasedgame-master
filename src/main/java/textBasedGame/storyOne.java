@@ -63,25 +63,31 @@ public class storyOne {
                         
                         break;
                     case 2:
-                        TurnCounter++;
-                        System.out.println("");
-                        System.out.println("==========================");
-                        System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                        System.out.println("==========================\n");
                         if (character.useMana(20)) {
+                            TurnCounter++;
+                            System.out.println("");
+                            System.out.println("==========================");
+                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                            System.out.println("==========================\n");
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objKappa.takeDamage(damage);
                         }
+                        else{
+                            continue;
+                        }
                         break;
                     case 3:
-                        TurnCounter++;
-                        System.out.println("");
-                        System.out.println("==========================");
-                        System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                        System.out.println("==========================\n");
                         if (character.useMana(30)) {
+                            TurnCounter++;
+                            System.out.println("");
+                            System.out.println("==========================");
+                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                            System.out.println("==========================\n");
                             damage = character.skillThree();// Random damage between 40 and 50
                             objKappa.takeDamage(damage);
+                        }
+                        else{
+                            continue;
                         }
                         break;
                     case 4:
@@ -212,25 +218,31 @@ public class storyOne {
                         
                         break;
                     case 2:
-                        TurnCounter++;
-                        System.out.println("");
-                        System.out.println("==========================");
-                        System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                        System.out.println("==========================\n");
                         if (character.useMana(20)) {
+                            TurnCounter++;
+                            System.out.println("");
+                            System.out.println("==========================");
+                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                            System.out.println("==========================\n");
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objHyo.takeDamage(damage);
                         }
+                        else{
+                            continue;
+                        }
                         break;
                     case 3:
-                        TurnCounter++;
-                        System.out.println("");
-                        System.out.println("==========================");
-                        System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                        System.out.println("==========================\n");
                         if (character.useMana(30)) {
+                            TurnCounter++;
+                            System.out.println("");
+                            System.out.println("==========================");
+                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                            System.out.println("==========================\n");
                             damage = character.skillThree();// Random damage between 40 and 50
                             objHyo.takeDamage(damage);
+                        }
+                        else{
+                            continue;
                         }
                         break;
                     case 4:
@@ -377,25 +389,31 @@ public class storyOne {
                         
                         break;
                     case 2:
-                        TurnCounter++;
-                        System.out.println("");
-                        System.out.println("==========================");
-                        System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                        System.out.println("==========================\n");
                         if (character.useMana(20)) {
+                            TurnCounter++;
+                            System.out.println("");
+                            System.out.println("==========================");
+                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                            System.out.println("==========================\n");
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objKrev.takeDamage(damage);
                         }
+                        else{
+                            continue;
+                        }
                         break;
                     case 3:
-                        TurnCounter++;
-                        System.out.println("");
-                        System.out.println("==========================");
-                        System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                        System.out.println("==========================\n");
                         if (character.useMana(30)) {
+                            TurnCounter++;
+                            System.out.println("");
+                            System.out.println("==========================");
+                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                            System.out.println("==========================\n");
                             damage = character.skillThree();// Random damage between 40 and 50
                             objKrev.takeDamage(damage);
+                        }
+                        else{
+                            continue;
                         }
                         break;
                     case 4:

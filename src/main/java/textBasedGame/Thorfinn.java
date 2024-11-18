@@ -9,7 +9,7 @@ package textBasedGame;
  * @author Silent Voice
  */
 import java.util.Scanner;
-public abstract class Thorfinn extends Player {
+public class Thorfinn extends Player {
     private String skillOneName = "Whirldwind Cleave";
     private String skillTwoName = "Seismic Strike";
     private String skillThreeName = "Blade Tempest";

@@ -79,8 +79,7 @@ public class MainGame {
                         isEnabled = false;
                         break;
                     case 2:
-                        playerCharacter = new Thorfinn("Thorfinn", 150, 100) {
-                        };
+                        playerCharacter = new Thorfinn("Thorfinn", 150, 100);
                         playerCharacter.intro();
                         isEnabled = false;
                         break;
