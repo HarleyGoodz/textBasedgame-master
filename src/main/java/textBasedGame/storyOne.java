@@ -511,6 +511,8 @@ public class storyOne {
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     objKrev.Krev_Defeat();
                     TurnCounter = 0;
+                    objIn.IncBossDropOneCount();
+                    System.out.println("You have received " + objIn.getBossDropOne() + "!");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }

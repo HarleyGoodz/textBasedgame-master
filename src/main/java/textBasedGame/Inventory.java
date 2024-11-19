@@ -11,8 +11,10 @@ package textBasedGame;
 public class Inventory {
     private String ItemOne = "Healing Potion";
     private String ItemTwo = "Mana Potion";
+    private String BossDropOne = "Sanguine Shackle";
     private int ItemOneCount = 1;
     private int ItemTwoCount = 1;
+    private int BossDropOneCount = 0;
     private int gold;
     
     public void setGold(int gold){
@@ -41,6 +43,21 @@ public class Inventory {
     
     public void IncItemTwoCount(){
         ItemTwoCount++;
+    }
+    
+    public String getBossDropOne(){
+        return BossDropOne;
+    }
+    
+    public void IncBossDropOneCount(){
+        BossDropOneCount++;
+    }
+    
+    public boolean getBossDropOneCount(){
+        if(BossDropOneCount == 1){
+            return true;
+        }
+        return false;
     }
     
     public int useItemOne(){
