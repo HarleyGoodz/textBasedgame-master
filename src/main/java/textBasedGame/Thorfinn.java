@@ -23,7 +23,6 @@ public class Thorfinn extends Player {
     public int skillOne(){
         int skillOneDamage = (int) (Math.random() * (40 - 30 + 1)) + 30;
         
-        System.out.println("Thorfinn uses Whirlwind Cleave! Deals " + skillOneDamage + " damage.");
         
         return skillOneDamage;
     }
@@ -32,7 +31,6 @@ public class Thorfinn extends Player {
     public int skillTwo(){
         int skillTwoDamage = (int) (Math.random() * (45 - 35 + 1)) + 35;
         
-        System.out.println("Thorfinn uses Seismic Strike! Deals " + skillTwoDamage + " damage.");
         
         return skillTwoDamage;
     }
@@ -41,7 +39,6 @@ public class Thorfinn extends Player {
     public int skillThree(){
         int skillThreeDamage = (int) (Math.random() * (50 - 45 + 1)) + 45;
         
-        System.out.println("Thorfinn uses Blade Tempest! Deals " + skillThreeDamage + " damage.");
         
         return skillThreeDamage;
     }

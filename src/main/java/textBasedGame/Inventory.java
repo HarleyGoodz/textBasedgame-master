@@ -12,9 +12,11 @@ public class Inventory {
     private String ItemOne = "Healing Potion";
     private String ItemTwo = "Mana Potion";
     private String BossDropOne = "Sanguine Shackle";
+    private String BossDropTwo = "Ravenbane Talisman";
     private int ItemOneCount = 1;
     private int ItemTwoCount = 1;
     private int BossDropOneCount = 0;
+    private int BossDropTwoCount = 0;
     private int gold;
     
     public void setGold(int gold){
@@ -58,6 +60,29 @@ public class Inventory {
             return true;
         }
         return false;
+    }
+    
+    public String getBossDropTwo(){
+        return BossDropTwo;
+    }
+    
+    public void IncBossDropTwoCount(){
+        BossDropTwoCount++;
+    }
+    
+    public boolean getBossDropTwoCount(){
+        if(BossDropTwoCount == 1){
+            return true;
+        }
+        return false;
+    }
+    
+    public int BossDropTwoEffect(int damage){
+        double multiplier = (double) (Math.random() * (2.0 - 1.8 + 1)) + 1.8;
+        
+        double MultipliedDamage = damage * multiplier;
+        
+        return (int) MultipliedDamage;
     }
     
     public int useItemOne(){

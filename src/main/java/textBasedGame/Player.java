@@ -16,6 +16,7 @@ public abstract class Player {
     private int MaxHealth;
     private int MaxMana;
     private int MaxExp;
+    private int ExpLevel = 1;
     private int Exp = 0;
     public boolean Defeated = false;
     
@@ -103,12 +104,27 @@ public abstract class Player {
         return Name;
     }
     
-    public void addExp(){
+    public void addExp(int addExp){
+        Exp += addExp;
+        
+        if(Exp >= MaxExp){
+            Exp = 0;
+            LevelUp();
+        }
+    }
+    
+    public void LevelUp(){
+        ExpLevel++;
+        MaxHealth += 25;
+        MaxMana += 25;
+        MaxExp += 25;
+            
+        System.out.println("You leveled up to " + ExpLevel + "!");
         
     }
     
     public String toString(){
-        return Name + "'s Health: " + Health + " | " + "Mana: " + Mana;
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " | " + "Mana: " + Mana + "/" + MaxMana + " | " + " XP: " + Exp + "/" + MaxExp;
     }
       
 }
