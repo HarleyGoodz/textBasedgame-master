@@ -166,7 +166,7 @@ public class storyOne {
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t"+character.getName() + " has defeated " + objKappa.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
-                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    objIn.setGold((int) (Math.random() * (75 - 45 + 1)) + 45);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)
@@ -321,7 +321,7 @@ public class storyOne {
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t"+character.getName() + " has defeated " + objHyo.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
-                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    objIn.setGold((int) (Math.random() * (75 - 45 + 1)) + 45);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
                     
@@ -511,8 +511,6 @@ public class storyOne {
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     objKrev.Krev_Defeat();
                     TurnCounter = 0;
-                    objIn.IncBossDropOneCount();
-                    System.out.println("You have received " + objIn.getBossDropOne() + "!");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }

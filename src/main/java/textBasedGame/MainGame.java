@@ -74,17 +74,17 @@ public class MainGame {
                 switch (choice) {
 
                     case 1:
-                        playerCharacter = new Musashi("Musashi Miyamoto", 100, 100);
+                        playerCharacter = new Musashi("Musashi Miyamoto", 100, 100, 100);
                         playerCharacter.intro();
                         isEnabled = false;
                         break;
                     case 2:
-                        playerCharacter = new Thorfinn("Thorfinn", 150, 100);
+                        playerCharacter = new Thorfinn("Thorfinn", 150, 100, 100);
                         playerCharacter.intro();
                         isEnabled = false;
                         break;
                     case 3:
-                        playerCharacter = new Gilgamesh("Gilgamesh", 100, 200);
+                        playerCharacter = new Gilgamesh("Gilgamesh", 100, 200, 100);
                         playerCharacter.intro();
                         isEnabled = false;
                         break;

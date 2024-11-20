@@ -82,17 +82,7 @@ public class storyThree {
                         
                         break;
                     case 2:
-                        if(character.useMana(20) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillTwo(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objAnzu.takeDamage(damage);
-                        }
-                        else if (character.useMana(20)) {
+                        if (character.useMana(20)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");
@@ -106,17 +96,7 @@ public class storyThree {
                         }
                         break;
                     case 3:
-                        if(character.useMana(30) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillThree(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objAnzu.takeDamage(damage);
-                        }
-                        else if (character.useMana(30)) {
+                        if (character.useMana(30)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");
@@ -205,7 +185,7 @@ public class storyThree {
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t"+character.getName() + " has defeated " + objAnzu.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
-                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    objIn.setGold((int) (Math.random() * (75 - 45 + 1)) + 45);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
                     System.out.println("\n--------------------VICTORY!--------------------------\n");
@@ -273,17 +253,7 @@ public class storyThree {
                         
                         break;
                     case 2:
-                        if(character.useMana(20) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillTwo(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objUrma.takeDamage(damage);
-                        }
-                        else if (character.useMana(20)) {
+                        if (character.useMana(20)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");
@@ -297,17 +267,7 @@ public class storyThree {
                         }
                         break;
                     case 3:
-                        if(character.useMana(30) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillThree(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objUrma.takeDamage(damage);
-                        }
-                        else if (character.useMana(30)) {
+                        if (character.useMana(30)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");
@@ -396,7 +356,7 @@ public class storyThree {
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t "+character.getName() + " has defeated " + objUrma.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
-                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    objIn.setGold((int) (Math.random() * (75 - 45 + 1)) + 45);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)
@@ -447,17 +407,7 @@ public class storyThree {
                         
                         break;
                     case 2:
-                        if(character.useMana(20) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillTwo(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objHum.takeDamage(damage);
-                        }
-                        else if (character.useMana(20)) {
+                        if (character.useMana(20)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");
@@ -478,16 +428,6 @@ public class storyThree {
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
                             damage = character.skillThree();// Random damage between 40 and 50
-                            objHum.takeDamage(damage);
-                        }
-                        else if(character.useMana(30) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillThree(); // Random damage between 35 and 45
-                            character.setHeal(15);
                             objHum.takeDamage(damage);
                         }
                         else{
@@ -570,7 +510,7 @@ public class storyThree {
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t "+character.getName() + " has defeated " + objHum.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
-                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    objIn.setGold((int) (Math.random() * (75 - 45 + 1)) + 45);
                     System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     TurnCounter = 0;
                     System.out.println("\n----------------------------------------------\n");
@@ -637,17 +577,7 @@ public class storyThree {
                         
                         break;
                     case 2:
-                        if(character.useMana(20) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillTwo(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objTia.takeDamage(damage);
-                        }
-                        else if (character.useMana(20)) {
+                        if (character.useMana(20)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");
@@ -661,17 +591,7 @@ public class storyThree {
                         }
                         break;
                     case 3:
-                        if(character.useMana(30) && objIn.getBossDropOneCount()){
-                            TurnCounter++;
-                            System.out.println("");
-                            System.out.println("==========================");
-                            System.out.println("||    Turn count: "+ TurnCounter +"     ||");
-                            System.out.println("==========================\n");
-                            damage = character.skillThree(); // Random damage between 35 and 45
-                            character.setHeal(15);
-                            objTia.takeDamage(damage);
-                        }
-                        else if (character.useMana(30)) {
+                        if (character.useMana(30)) {
                             TurnCounter++;
                             System.out.println("");
                             System.out.println("==========================");

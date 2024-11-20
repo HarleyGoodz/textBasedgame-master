@@ -15,8 +15,8 @@ public class Musashi extends Player {
     private String skillThreeName = "Demon Fang Strike";
             
     
-    public Musashi(String Name, int Health, int Mana){
-        super(Name, Health, Mana);
+    public Musashi(String Name, int Health, int Mana, int Exp){
+        super(Name, Health, Mana, Exp);
     }
     
     @Override

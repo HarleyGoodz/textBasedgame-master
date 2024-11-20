@@ -15,14 +15,17 @@ public abstract class Player {
     private int Mana;
     private int MaxHealth;
     private int MaxMana;
+    private int MaxExp;
+    private int Exp = 0;
     public boolean Defeated = false;
     
-    public Player(String Name, int MaxHealth, int MaxMana){
+    public Player(String Name, int MaxHealth, int MaxMana, int MaxExp){
         this.Name = Name;
         this.MaxHealth = MaxHealth;
         this.Health = MaxHealth;
         this.MaxMana = MaxMana;
         this.Mana = MaxMana;
+        this.MaxExp = MaxExp;
     }
     
     public abstract int skillOne();
@@ -98,6 +101,10 @@ public abstract class Player {
     
     public String getName(){
         return Name;
+    }
+    
+    public void addExp(){
+        
     }
     
     public String toString(){

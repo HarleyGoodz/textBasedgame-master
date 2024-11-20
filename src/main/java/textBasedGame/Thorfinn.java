@@ -14,8 +14,8 @@ public class Thorfinn extends Player {
     private String skillTwoName = "Seismic Strike";
     private String skillThreeName = "Blade Tempest";
     
-    public Thorfinn(String Name, int Health, int Mana){
-        super(Name, Health, Mana);
+    public Thorfinn(String Name, int Health, int Mana, int Exp){
+        super(Name, Health, Mana, Exp);
     }
     
     

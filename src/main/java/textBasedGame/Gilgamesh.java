@@ -14,8 +14,8 @@ public class Gilgamesh extends Player{
     private String skillTwoName = "Astral Surge";
     private String skillThreeName = "Celestial Binding";
     
-    public Gilgamesh(String Name, int Health, int Mana){
-        super(Name, Health, Mana);
+    public Gilgamesh(String Name, int Health, int Mana, int Exp){
+        super(Name, Health, Mana, Exp);
     }
     
     

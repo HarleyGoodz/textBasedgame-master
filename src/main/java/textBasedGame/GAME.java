@@ -3,7 +3,7 @@ package textBasedGame;
 import java.util.Scanner;
 
 public class GAME{
-    Musashi objMush = new Musashi("Musashi Miyamoto", 100, 100);
+    Musashi objMush = new Musashi("Musashi Miyamoto", 100, 100, 100);
     KrevMalak objKrev = new KrevMalak("Krev Malak",150);
     Kappa objKappa = new Kappa("Kappa", 100);
     Hyosube objHyo = new Hyosube("Hyosube", 100);
