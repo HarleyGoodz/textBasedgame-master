@@ -7,6 +7,7 @@ public class storyOne {
     Kappa objKappa = new Kappa("Kappa", 100);
     Hyosube objHyo = new Hyosube("Hyosube", 100);
     Scanner scanner = new Scanner(System.in);
+    Inventory objIn;
     int TurnCounter = 0;
 
     private AudioManager audioManager;
@@ -14,13 +15,17 @@ public class storyOne {
     public storyOne(AudioManager audioManager) {
         this.audioManager = audioManager;
     }
+
+    public storyOne(Inventory objIn){
+        this.objIn = objIn;
+    }
     
     public void wallOne(Player character, Inventory objIn){
         Scanner scanner = new Scanner(System.in);
         openShop objShop = new openShop(objIn);
 
-        audioManager.playAudio("c:\\Users\\User\\Downloads\\Undertale OST_ 014 - Heartache - Misaki.wav");
-
+        audioManager.playAudio("textBasedgame-master/OST/Undertale OST_ 014 - Heartache - Misaki.wav");
+        
         
 
         
@@ -398,7 +403,7 @@ public class storyOne {
         }
 
         audioManager.stopAudio();
-        audioManager.playAudio("c:\\Users\\User\\Downloads\\Dark Souls_ Chiptune Demixes - Iron Golem.wav");
+        audioManager.playAudio("textBasedgame-master/OST/Dark Souls_ Chiptune Demixes - Iron Golem.wav");
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     
         while (objKrev.getHealth() > 0 && character.getHealth() > 0) {
@@ -571,7 +576,7 @@ public class storyOne {
                     break;
                 } else if (objKrev.getHealth() <= 0) {
                     audioManager.stopAudio();
-                    audioManager.playAudio("c:\\Users\\User\\Downloads\\8-bit RPG Music  Victory Theme.wav");
+                    audioManager.playAudio("textBasedgame-master/OST/8-bit RPG Music  Victory Theme.wav");
                     System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t "+ character.getName() + " has defeated " + objKrev.getName());

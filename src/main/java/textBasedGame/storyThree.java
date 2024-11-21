@@ -28,7 +28,7 @@ public class storyThree {
     Scanner scanner = new Scanner(System.in);
     openShop objShop = new openShop(objIn);
     audioManager.stopAudio();
-    audioManager.playAudio("c:\\Users\\User\\Downloads\\Dark Souls_ Chiptune Demixes - Chaos Witch Quelaag.wav");
+    audioManager.playAudio("textBasedgame-master/OST/Dark Souls_ Chiptune Demixes - Chaos Witch Quelaag.wav");
     System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     System.out.println("\n---------THE FINAL CHAPTER---------------\n");
     System.out.println("You have arrived at the final wall... A hellish journey awaits you.");
@@ -700,7 +700,7 @@ public class storyThree {
                     TurnCounter = 0;
 
                     audioManager.stopAudio();
-                    audioManager.playAudio("c:\\Users\\User\\Downloads\\Dark Souls_ Chiptune Demixes - Centipede Demon.wav");
+                    audioManager.playAudio("textBasedgame-master/OST/Dark Souls_ Chiptune Demixes - Centipede Demon.wav");
                     System.out.println("\n----------------------------------------------\n");
                     System.out.println("After defeating those who attempted to trample your path, you managed to prevail on your adventure,\n"+
                     "you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
@@ -941,7 +941,7 @@ public class storyThree {
                     System.out.println(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     audioManager.stopAudio();
-        audioManager.playAudio("c:\\Users\\User\\Downloads\\Dark Souls_ Chiptune Demixes - Character Config [bonus].wav");
+        audioManager.playAudio("textBasedgame-master/OST/Dark Souls_ Chiptune Demixes - Character Config [bonus].wav");
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("\n-=-=-=-=-=-=-=-=-=-=-TIAMAT HAS BEEN DEFEATED!-=-=-=-=-=-=-=-=-=-=-\n");
         System.out.println("The battle has been long and brutal. You are bruised and battered but still stands.\n");
