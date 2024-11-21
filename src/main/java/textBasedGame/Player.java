@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package textBasedGame;
 
 /**
@@ -120,12 +116,43 @@ public abstract class Player {
         MaxExp += 25;
             
         System.out.println("You leveled up to " + ExpLevel + "!");
-        
     }
+
     
     public String toString(){
-        return Name + "'s Health: " + Health + "/" + MaxHealth + " | " + "Mana: " + Mana + "/" + MaxMana + " | " + " XP: " + Exp + "/" + MaxExp;
+        return Name + "'s Status:\n" +
+               "\nHealth: " + generateBar(Health, MaxHealth, 20, "RED") + " (" + Health + "/" + MaxHealth + ")\n" +
+               "\nMana:   " + generateBar(Mana, MaxMana, 20, "BLUE") + " (" + Mana + "/" + MaxMana + ")\n" +
+               "\nXP:     " + generateBar(Exp, MaxExp, 20, "YELLOW") + " (" + Exp + "/" + MaxExp + ")\n";
     }
-      
-}
     
+    
+    private String generateBar(int currentValue, int maxValue, int barLength, String color) {
+        int filledLength = (int) ((double) currentValue / maxValue * barLength);
+        StringBuilder bar = new StringBuilder();
+
+        String colorCode;
+        switch (color) {
+            case "RED":
+                colorCode = "\u001B[31m";
+                break;
+            case "BLUE":
+                colorCode = "\u001B[34m";
+                break;
+            case "YELLOW":
+                colorCode = "\u001B[33m"; 
+                break;
+            default:
+                colorCode = "\u001B[0m"; 
+        }
+
+        for (int i = 0; i < filledLength; i++) {
+            bar.append(colorCode).append("██").append("\u001B[0m");
+        }
+        for (int i = filledLength; i < barLength; i++) {
+            bar.append("  ");
+        }
+
+        return bar.toString();
+    }
+}

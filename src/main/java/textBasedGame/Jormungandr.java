@@ -16,30 +16,33 @@ public class Jormungandr extends Enemy{
     
     public void Serpent_backstory(){
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("\n--------------------BACKSTORY---------------------------\n");
         System.out.println("Once, Jormungandr was revered as a guardian spirit, a colossal serpent who ruled over an ancient, sacred land. \n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        
         
         System.out.println("-----------------------------------------------\n");
         System.out.println("His presence ensured the balance of nature, protecting the forests, rivers, and mountains from destruction. \n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         
         System.out.println("-----------------------------------------------");
         System.out.println("However, as the ages passed, human greed began to grow. Kings and conquerors, driven by ambition, \n"
                 + "sought to take control of serpent’s sacred land, viewing it as a powerful resource.\n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         
         System.out.println("-----------------------------------------------");
         System.out.println("Consumed by great anger, the serpent swore that no mortal would ever set foot in his territory again.\n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         
         System.out.println("-----------------------------------------------");
         System.out.println("Those who dared to enter his domain would face his wrath and be consumed \n"
@@ -56,19 +59,21 @@ public class Jormungandr extends Enemy{
                 + "\n\npress 'Enter' to continue....");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("despising the humans who relentlessly trampled upon its beauty. It was not evil, it was a guardian, \n"
         + "a force of nature corrupted by the greed of mortals. "
                 + "\n\npress 'Enter' to continue....");
         scanner.nextLine();
    
-        
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("Seeing the creature\'s true intentions, you did not strike the final blow. Instead, \n"
         + "you hurled a powerful healing potion toward the fallen serpent. \n"
                 + "\npress 'Enter' to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("As the magic took hold, the serpent's  darkened scales began to shimmer. \n"
                 + "The player's selfless act proved that not all of humanity \n"
@@ -76,28 +81,33 @@ public class Jormungandr extends Enemy{
                 + "\npress 'Enter' to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("The legendary serpent slithered forward, its massive form now a symbol of peace, not fear. \n"
                 + "\"You have restored my faith, human,\" the serpent's voice rumbled like distant thunder. "
                 + "\n\npress 'Enter' to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("\"Not all mortals are blind to the world's true beauty. You have shown me that humanity still has hope.\""
                 + "\n\npress 'Enter' to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("With newfound trust, the serpent guided you through the twisted, never ending forest.\n"
                 + " As they reached the edge of the cursed woods, the serpent turned one final time."
                 + "\n\npress 'Enter' to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("\"Thank you, human. You have proven that there is still light among your kind.\""
                 + "\n\npress 'Enter' to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("the legendary serpent vanished into the shadows, leaving the you to continue your journey.\n"
                 + "\n\npress 'Enter' to continue");

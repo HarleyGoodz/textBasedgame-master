@@ -1,6 +1,14 @@
 package textBasedGame;
 
 import java.util.Scanner;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
+
+
+
 
 public class storyOne {
     KrevMalak objKrev = new KrevMalak("Krev Malak",150);
@@ -8,21 +16,36 @@ public class storyOne {
     Hyosube objHyo = new Hyosube("Hyosube", 100);
     Scanner scanner = new Scanner(System.in);
     int TurnCounter = 0;
-    
-    
-    
 
+    private AudioManager audioManager;
+
+    public storyOne(AudioManager audioManager) {
+        this.audioManager = audioManager;
+    }
+
+    
+    
+    
     public void wallOne(Player character, Inventory objIn){
         Scanner scanner = new Scanner(System.in);
         openShop objShop = new openShop(objIn);
+
+        audioManager.playAudio("c:\\Users\\User\\Downloads\\Undertale OST_ 014 - Heartache - Misaki.wav");
+
         
+
+        
+        
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------");
         System.out.println("\nPrepare for battle as two of the demons appeared in your path, GET READY TO KILL!\n"
                 + "\n press 'Enter' to continue");
         scanner.nextLine();
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         
         while (objKappa.getHealth() > 0 && character.getHealth() > 0){
-
+            
+            
             System.out.println("======================================================");
             System.out.println("||      WALL 1: Gunkanjima     ||      MINION 1    ||");
             System.out.println("======================================================\n\n");
@@ -55,7 +78,7 @@ public class storyOne {
                 switch (skillChoice) {
                     case 1:
                         TurnCounter++;
-                        System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -68,7 +91,7 @@ public class storyOne {
                     case 2:
                         if (character.useMana(20)) {
                             TurnCounter++;
-                            System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -83,7 +106,7 @@ public class storyOne {
                     case 3:
                         if (character.useMana(30)) {
                             TurnCounter++;
-                            System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -97,7 +120,7 @@ public class storyOne {
                         break;
                     case 4:
                         TurnCounter++;
-                        System.out.println("");
+                        
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -107,14 +130,15 @@ public class storyOne {
                     case 5:
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == 100){
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                                 System.out.println("\nYou're still full in Health!\n");
                                 continue;
                             }
                             else{
-                                System.out.println("------------------------------");
-                                System.out.println("");
-                                System.out.println("Turn count: " + TurnCounter);
-                                System.out.println("");
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                                System.out.println("==========================");
+                                System.out.println("||    Turn count: "+ TurnCounter +"     ||");
+                                System.out.println("==========================\n");
                                 System.out.println("Added +50 to " + character.getName() + "'s Health!");
                                 heal = objIn.useItemOne();
                                 character.setHeal(heal);
@@ -122,17 +146,19 @@ public class storyOne {
                             }
                         }
                         else{
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("\nYou're out of Health Potions!\n");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == 100){
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                                 System.out.println("\nYou're still full in Mana!\n");
                                 continue;
                             }
                             else{
-                                System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -143,10 +169,12 @@ public class storyOne {
                             }
                         }
                         else{
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("\nYou're out of Mana Potions!\n");
                             continue;
                         }
                     default:
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
                         continue;
                 }
@@ -162,12 +190,13 @@ public class storyOne {
 
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println(character.getName() + " has fallen. " + objKappa.getName() + " prevails.");
                     TurnCounter = 0;
                     character.setDefeated(true);
                     break;
                 } else if (objKappa.getHealth() <= 0) {
-                    System.out.println("");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t"+character.getName() + " has defeated " + objKappa.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
@@ -182,6 +211,7 @@ public class storyOne {
                     break;
                 }
             } catch (Exception e) {
+                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                 System.out.println("Invalid input! Please enter a valid number.");
                 scanner.nextLine();  // Clear the buffer
             }
@@ -189,6 +219,7 @@ public class storyOne {
         
         
         while (objHyo.getHealth() > 0 && character.getHealth() > 0){
+            
             System.out.println("======================================================");
             System.out.println("||      WALL 1: Gunkanjima     ||      MINION 2    ||");
             System.out.println("======================================================\n\n");
@@ -219,7 +250,7 @@ public class storyOne {
                 switch (skillChoice) {
                     case 1:
                         TurnCounter++;
-                        System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -232,7 +263,7 @@ public class storyOne {
                     case 2:
                         if (character.useMana(20)) {
                             TurnCounter++;
-                            System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -247,7 +278,7 @@ public class storyOne {
                     case 3:
                         if (character.useMana(30)) {
                             TurnCounter++;
-                            System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -261,7 +292,7 @@ public class storyOne {
                         break;
                     case 4:
                         TurnCounter++;
-                        System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -271,11 +302,12 @@ public class storyOne {
                     case 5:
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == 100){
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                                 System.out.println("\nYou're still full in Health!\n");
                                 continue;
                             }
                             else{
-                                System.out.println("");
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -286,17 +318,19 @@ public class storyOne {
                             }
                         }
                         else{
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("\nYou're out of Health Potions!\n");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == 100){
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                                 System.out.println("\nYou're still full in Mana!\n");
                                 continue;
                             }
                             else{
-                                System.out.println("");
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================");
@@ -307,10 +341,12 @@ public class storyOne {
                             }
                         }
                         else{
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("\nYou're out of Mana Potions!\n");
                             continue;
                         }
                     default:
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
                         continue;
                 }
@@ -326,12 +362,13 @@ public class storyOne {
 
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println(character.getName() + " has fallen. " + objHyo.getName() + " prevails.");
                     TurnCounter = 0;
                     character.setDefeated(true);
                     break;
                 } else if (objHyo.getHealth() <= 0) {
-                    System.out.println("");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t"+character.getName() + " has defeated " + objHyo.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
@@ -343,12 +380,14 @@ public class storyOne {
                     character.addExp(Exp);
                     TurnCounter = 0;
                     
+
                     System.out.println("------------------------------------------\n");
                     System.out.println("After killing the 2 demons that blocked your path... \n"
                     + "you continued at your journey, smelling the scent of a godly power...."
                     + "\n\nPress Enter to continue");
                     scanner.nextLine();
-        
+                    
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println("------------------ARRIVAL!-----------------------\n");
                     System.out.println("You have finally arrived at the hellish domain of KREV MALAK!\n"
                     + "\npress 'Enter' to continue");
@@ -360,14 +399,18 @@ public class storyOne {
                     break;
                 }
             } catch (Exception e) {
+                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                 System.out.println("Invalid input! Please enter a valid number.");
                 scanner.nextLine();  // Clear the buffer
             }
         }
-        
-        
+
+        audioManager.stopAudio();
+        audioManager.playAudio("c:\\Users\\User\\Downloads\\Dark Souls_ Chiptune Demixes - Iron Golem.wav");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     
         while (objKrev.getHealth() > 0 && character.getHealth() > 0) {
+            
             System.out.println("======================================================");
             System.out.println("||      WALL 1: Gunkanjima     ||      BOSS 1    ||");
             System.out.println("======================================================\n\n");
@@ -399,7 +442,7 @@ public class storyOne {
                 switch (skillChoice) {
                     case 1:
                         TurnCounter++;
-                        System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -412,7 +455,7 @@ public class storyOne {
                     case 2:
                         if (character.useMana(20)) {
                             TurnCounter++;
-                            System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -427,7 +470,7 @@ public class storyOne {
                     case 3:
                         if (character.useMana(30)) {
                             TurnCounter++;
-                            System.out.println("");
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("==========================");
                             System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                             System.out.println("==========================\n");
@@ -441,7 +484,7 @@ public class storyOne {
                         break;
                     case 4:
                         TurnCounter++;
-                        System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -451,11 +494,12 @@ public class storyOne {
                     case 5:
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == 100){
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                                 System.out.println("\nYou're still full in Health!\n");
                                 continue;
                             }
                             else{
-                                System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -466,17 +510,19 @@ public class storyOne {
                             }
                         }
                         else{
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("\nYou're out of Health Potions!\n");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == 100){
+                                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                                 System.out.println("\nYou're still full in Mana!\n");
                                 continue;
                             }
                             else{
-                                System.out.println("");
+                        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("==========================");
                         System.out.println("||    Turn count: "+ TurnCounter +"     ||");
                         System.out.println("==========================\n");
@@ -487,10 +533,12 @@ public class storyOne {
                             }
                         }
                         else{
+                            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                             System.out.println("\nYou're out of Mana Potions!\n");
                             continue;
                         }
                     default:
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                         System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
                         continue;
                 }
@@ -521,12 +569,16 @@ public class storyOne {
 
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
+                    audioManager.stopAudio();
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println(character.getName() + " has fallen. " + objKrev.getName() + " prevails.");
                     TurnCounter = 0;
                     character.setDefeated(true);
                     break;
                 } else if (objKrev.getHealth() <= 0) {
-                    System.out.println("");
+                    audioManager.stopAudio();
+                    audioManager.playAudio("c:\\Users\\User\\Downloads\\8-bit RPG Music  Victory Theme.wav");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t "+ character.getName() + " has defeated " + objKrev.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
@@ -544,6 +596,7 @@ public class storyOne {
                     break;
                 }
             } catch (Exception e) {
+                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                 System.out.println("Invalid input! Please enter a valid number.");
                 scanner.nextLine();  // Clear the buffer
             }

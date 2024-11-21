@@ -71,12 +71,14 @@ public class KrevMalak extends Enemy {
     public void Krev_BackStory(){
         
         Scanner scanner = new Scanner(System.in);
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("----------------BACKSTORY-------------------------------\n");
         System.out.println("Krev Malak, a god blinded by greed and an insatiable hunger for power. \n"
                 + "The more suffering he caused, the more powerful he becomes, feeding off the fear and hopelessness of his victims."
                 + "\n\npress 'Enter to continue");
         scanner.nextLine();
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("one that went beyond personal gain,he would become the embodiment of despair itself,\n"
                 + " a living nightmare capable of plunging the world into endless darkness. \n"
@@ -87,6 +89,7 @@ public class KrevMalak extends Enemy {
     public void Krev_IncomingBattle(){
         Scanner scanner = new Scanner(System.in);
         
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("As you spot Krev Malak seated on his throne, a massive battle looms,\n"
                 + " shrouded in shadows and flames. With a fierce charge, you teleported to Krev,\n"
@@ -99,6 +102,7 @@ public class KrevMalak extends Enemy {
     
     public void Krev_Defeat(){
         Scanner scanner = new Scanner(System.in);
+        
         System.out.println("\n-------------------VICTORY ENDING----------------------------\n");
         System.out.println("Finally, the God of Despair can prevail no more\n"
                 + "As Krev lies defeated, you stood at the edge of victory and honor, while Krev is in the brink of death,\n"
@@ -106,7 +110,7 @@ public class KrevMalak extends Enemy {
                 + "\n\npress 'Enter to continue");
         scanner.nextLine();
         
-      
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("-----------------------------------------------\n");
         System.out.println("The victory is sweet, a glorious battle indeed.\n"
                 + "you sheath your weapon and walked away, leaving the body of Krev Malak behind, knowing that the real fight has just begun.\n"
