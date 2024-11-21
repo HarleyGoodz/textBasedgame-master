@@ -46,7 +46,7 @@ public class MainGame {
         System.out.println("\n\n\n");
 
         
-        File file = new File("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Starting.wav");
+        File file = new File("textBasedgame-master/OST/Starting.wav");
         try {
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
             Clip clip = AudioSystem.getClip();

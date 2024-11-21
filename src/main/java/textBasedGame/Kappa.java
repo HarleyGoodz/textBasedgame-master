@@ -50,7 +50,27 @@ public class Kappa extends Minion{
     @Override
     public String toString(){
         
-        return Name + "'s Health: " + Health;
-    }
+        int maxHealth = 100; 
+        int barLength = 20; 
+        int filledLength = (int) ((double) Health / maxHealth * barLength);
+    
+        
+        final String RED = "\u001B[31m"; 
+        final String RESET = "\u001B[0m"; 
+    
+        
+        StringBuilder healthBar = new StringBuilder("[");
+        for (int i = 0; i < barLength; i++) {
+            if (i < filledLength) {
+                healthBar.append(RED).append("■").append(RESET); 
+            } else {
+                healthBar.append(" "); 
+            }
+        }
+        healthBar.append("]");
+    
+        
+        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+}
     
 }
