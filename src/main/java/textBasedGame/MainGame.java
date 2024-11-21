@@ -2,6 +2,7 @@ package textBasedGame;
 
 import java.io.File;
 import java.util.Scanner;
+
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -190,7 +191,7 @@ public class MainGame {
         } catch (Exception e) {
             System.out.println("Error playing audio: " + e.getMessage());
         } finally {
-            scan.close(); // Close the scanner to avoid memory leak
+            scan.close();
         }
     }
 }

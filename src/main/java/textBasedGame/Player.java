@@ -25,11 +25,6 @@ public abstract class Player {
         this.MaxExp = MaxExp;
     }
 
-    Inventory objIn;
-
-    public Player(Inventory objIn){
-        this.objIn = objIn;
-    }
     
     public abstract int skillOne();
     public abstract int skillTwo();

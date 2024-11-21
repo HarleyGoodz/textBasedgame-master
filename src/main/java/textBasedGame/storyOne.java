@@ -1,17 +1,12 @@
 package textBasedGame;
 
 import java.util.Scanner;
-import java.io.File;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 
 public class storyOne {
     KrevMalak objKrev = new KrevMalak("Krev Malak",150);
     Kappa objKappa = new Kappa("Kappa", 100);
     Hyosube objHyo = new Hyosube("Hyosube", 100);
     Scanner scanner = new Scanner(System.in);
-    Inventory objIn;
     int TurnCounter = 0;
 
     private AudioManager audioManager;
@@ -19,17 +14,6 @@ public class storyOne {
     public storyOne(AudioManager audioManager) {
         this.audioManager = audioManager;
     }
-
-    public storyOne(Inventory objIn){
-        this.objIn = objIn;
-    }
-
-    
-
-    
-
-    
-    
     
     public void wallOne(Player character, Inventory objIn){
         Scanner scanner = new Scanner(System.in);

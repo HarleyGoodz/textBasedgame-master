@@ -19,11 +19,6 @@ public class storyThree {
 
     private AudioManager audioManager;
 
-    Inventory objIn;
-    public storyThree(Inventory objIn){
-        this.objIn = objIn;
-    }
-
     public storyThree(AudioManager audioManager) {
         this.audioManager = audioManager;
     }

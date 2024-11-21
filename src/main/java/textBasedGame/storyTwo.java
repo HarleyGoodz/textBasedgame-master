@@ -23,11 +23,6 @@ public class storyTwo {
         this.audioManager = audioManager;
     }
 
-    Inventory objIn;
-    public storyTwo(Inventory objIn){
-        this.objIn = objIn;
-    }
-    
     
     public void wallTwo(Player character, Inventory objIn){
        Scanner scanner = new Scanner(System.in);
