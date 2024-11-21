@@ -15,6 +15,7 @@ public class openShop {
     public openShop(Inventory objIn){
         this.objIn = objIn;
     }
+    int buyCount = 0;
     
    
     public void Shop(Scanner scanner) {
@@ -36,9 +37,19 @@ public class openShop {
 
                 if (itemChoice == 1 && objIn.getGold() >= 100) {
                     objIn.useGold(100);
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-------------------------------------------");
+                    buyCount++;
+                    System.out.println("\t\tBUY COUNT: "+buyCount+"");
+                    System.out.println("-------------------------------------------");
                     System.out.println();
-                    System.out.println("        You bought a Healing Potion!");
-                    System.out.print("        ~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+    
+                    System.out.println("Items available for purchase:");
+                    System.out.println("1. Healing Potion (Restores 50 HP) - 100 Gold");
+                    System.out.println("2. Mana Potion (Restores 50 Mana) - 100 Gold");
+                    System.out.println();
+                    System.out.println("\u001B[33m        You bought a Healing Potion!");;
+                    System.out.print("        ~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001B[0m \n\n");
                     objIn.IncItemOneCount();
 
                     System.out.println("        ==========================");
@@ -48,9 +59,20 @@ public class openShop {
 
                 } else if (itemChoice == 2 && objIn.getGold() >= 100) {
                     objIn.useGold(100);
+                    
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-------------------------------------------");
+                    buyCount++;
+                    System.out.println("\t\tBUY COUNT: "+buyCount+"");
+                    System.out.println("-------------------------------------------");
                     System.out.println();
-                    System.out.println("        You bought a Mana Potion!");
-                    System.out.print("        ~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+                    
+                    System.out.println("Items available for purchase:");
+                    System.out.println("1. Healing Potion (Restores 50 HP) - 100 Gold");
+                    System.out.println("2. Mana Potion (Restores 50 Mana) - 100 Gold");
+                    System.out.println();
+                    System.out.println("\u001B[34m        You bought a Mana Potion!\u001B[0m");
+                    System.out.print("\u001B[34m        ~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\u001B[0m");
                     objIn.IncItemTwoCount();
 
                     System.out.println("        ==========================");
@@ -58,14 +80,59 @@ public class openShop {
                     System.out.println("        ==========================\n\n");
 
                 } else if (itemChoice == 0) {
-                    System.out.println("You have exited the shop.\n\n");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-------------------------------------------");
+                    
+                    System.out.println("\t\tBUY COUNT: "+buyCount+"");
+                    System.out.println("-------------------------------------------");
+                    System.out.println();
+    
+                    System.out.println("Items available for purchase:");
+                    System.out.println("1. Healing Potion (Restores 50 HP) - 100 Gold");
+                    System.out.println("2. Mana Potion (Restores 50 Mana) - 100 Gold");
+                    System.out.println();
+                    
+                    System.out.println("\u001B[31mYou have exited the shop.\n\n\u001B[0m");
+                    buyCount = 0;
                     break;  
                 } else {
-                    System.out.println("\n\nInvalid choice or not enough coins! Try again.");
-                    System.out.println("Gold Remaining: " + objIn.getGold()+"\n");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-------------------------------------------");
+                    
+                    System.out.println("\t\tBUY COUNT: "+buyCount+"");
+                    System.out.println("-------------------------------------------");
+                    System.out.println();
+    
+                    System.out.println("Items available for purchase:");
+                    System.out.println("1. Healing Potion (Restores 50 HP) - 100 Gold");
+                    System.out.println("2. Mana Potion (Restores 50 Mana) - 100 Gold");
+                    System.out.println();
+
+                    System.out.println("        ==========================");
+                    System.out.println("        || Gold Remaining: " + objIn.getGold()+"||");
+                    System.out.println("        ==========================\n\n");
+
+                    System.out.println("\u001B[31m\n\nInvalid choice or not enough coins! Try again.\n\n \u001B[0m");
+                   
                 }
             } catch (Exception e) {
-                System.out.println("\n\nInvalid input! Please enter a valid number.\n\n");
+                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println("-------------------------------------------");
+                    
+                    System.out.println("\t\tBUY COUNT: "+buyCount+"");
+                    System.out.println("-------------------------------------------");
+                    System.out.println();
+    
+                    System.out.println("Items available for purchase:");
+                    System.out.println("1. Healing Potion (Restores 50 HP) - 100 Gold");
+                    System.out.println("2. Mana Potion (Restores 50 Mana) - 100 Gold");
+                    System.out.println();
+
+                    System.out.println("        ==========================");
+                    System.out.println("        || Gold Remaining: " + objIn.getGold()+"||");
+                    System.out.println("        ==========================\n\n");
+
+                System.out.println("\u001B[31m \n\nInvalid input! Please enter a valid number.\u001B[0m \n\n");
                 scanner.nextLine();  
             }
         }

@@ -19,6 +19,11 @@ public class storyThree {
 
     private AudioManager audioManager;
 
+    Inventory objIn;
+    public storyThree(Inventory objIn){
+        this.objIn = objIn;
+    }
+
     public storyThree(AudioManager audioManager) {
         this.audioManager = audioManager;
     }
@@ -60,7 +65,8 @@ public class storyThree {
         while (objAnzu.getHealth() > 0 && character.getHealth() > 0){
             System.out.println("=================================================");
             System.out.println("||      WALL 3: Nippur     ||      MINION 1    ||");
-            System.out.println("=================================================\n\n");
+            System.out.println("=================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objAnzu.toString());
             
@@ -288,7 +294,8 @@ public class storyThree {
         while (objUrma.getHealth() > 0 && character.getHealth() > 0){
             System.out.println("=================================================");
             System.out.println("||      WALL 3: Nippur     ||      MINION 2    ||");
-            System.out.println("=================================================\n\n");
+            System.out.println("=================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objUrma.toString());
             
@@ -499,7 +506,8 @@ public class storyThree {
         while (objHum.getHealth() > 0 && character.getHealth() > 0){
             System.out.println("=================================================");
             System.out.println("||      WALL 3: Nippur     ||      MINION 3    ||");
-            System.out.println("=================================================\n\n");
+            System.out.println("=================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objHum.toString());
             
@@ -730,7 +738,8 @@ public class storyThree {
             System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             System.out.println("==================================================");
             System.out.println("||      WALL 3: Nippur     ||      FINAL BOSS    ||");
-            System.out.println("==================================================\n\n");
+            System.out.println("==================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objTia.toString());
 

@@ -6,15 +6,12 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-
-
-
-
 public class storyOne {
     KrevMalak objKrev = new KrevMalak("Krev Malak",150);
     Kappa objKappa = new Kappa("Kappa", 100);
     Hyosube objHyo = new Hyosube("Hyosube", 100);
     Scanner scanner = new Scanner(System.in);
+    Inventory objIn;
     int TurnCounter = 0;
 
     private AudioManager audioManager;
@@ -22,6 +19,14 @@ public class storyOne {
     public storyOne(AudioManager audioManager) {
         this.audioManager = audioManager;
     }
+
+    public storyOne(Inventory objIn){
+        this.objIn = objIn;
+    }
+
+    
+
+    
 
     
     
@@ -48,7 +53,8 @@ public class storyOne {
             
             System.out.println("======================================================");
             System.out.println("||      WALL 1: Gunkanjima     ||      MINION 1    ||");
-            System.out.println("======================================================\n\n");
+            System.out.println("======================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objKappa.toString());
 
@@ -197,6 +203,7 @@ public class storyOne {
                     break;
                 } else if (objKappa.getHealth() <= 0) {
                     System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t"+character.getName() + " has defeated " + objKappa.getName());
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
@@ -222,7 +229,8 @@ public class storyOne {
             
             System.out.println("======================================================");
             System.out.println("||      WALL 1: Gunkanjima     ||      MINION 2    ||");
-            System.out.println("======================================================\n\n");
+            System.out.println("======================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objHyo.toString());
             
@@ -413,7 +421,8 @@ public class storyOne {
             
             System.out.println("======================================================");
             System.out.println("||      WALL 1: Gunkanjima     ||      BOSS 1    ||");
-            System.out.println("======================================================\n\n");
+            System.out.println("======================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objKrev.toString());
 
@@ -430,6 +439,7 @@ public class storyOne {
             System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
+            
             try {
                 int skillChoice = scanner.nextInt();
                 scanner.nextLine();  // Consume newline
@@ -589,7 +599,18 @@ public class storyOne {
                     System.out.println(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     objIn.IncBossDropOneCount();
-                    System.out.println("You have received " + objIn.getBossDropOne() + "!");
+                    
+
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    System.out.println("\u001B[32m\n\n YOU HAVE RECEIVED '" + objIn.getBossDropOne() + "'\u001B[0m \n\n");
+                    System.out.println("\t \u001B[31mIN EFFECT!: LIFESTEAL +15\u001B[0m \n\n\n\n");
+
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    
+                    System.out.println("\n\n\n\n\n\nPress Enter to Continue!");
+
+                    scanner.nextLine();
                     objKrev.Krev_Defeat();
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)

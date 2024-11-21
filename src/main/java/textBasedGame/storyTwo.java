@@ -22,6 +22,11 @@ public class storyTwo {
     public storyTwo(AudioManager audioManager) {
         this.audioManager = audioManager;
     }
+
+    Inventory objIn;
+    public storyTwo(Inventory objIn){
+        this.objIn = objIn;
+    }
     
     
     public void wallTwo(Player character, Inventory objIn){
@@ -65,7 +70,8 @@ public class storyTwo {
         while (objMare.getHealth() > 0 && character.getHealth() > 0){
             System.out.println("====================================================");
             System.out.println("||      WORLD 2: Bjorndal     ||      MINION 1    ||");
-            System.out.println("====================================================\n\n");
+            System.out.println("====================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objMare.toString());
             
@@ -256,7 +262,8 @@ public class storyTwo {
         while (objDrau.getHealth() > 0 && character.getHealth() > 0){
             System.out.println("====================================================");
             System.out.println("||      WORLD 2: Bjorndal     ||      MINION 2    ||");
-            System.out.println("====================================================\n\n");
+            System.out.println("====================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objDrau.toString());
             
@@ -448,7 +455,8 @@ public class storyTwo {
         while (objFoss.getHealth() > 0 && character.getHealth() > 0){
             System.out.println("====================================================");
             System.out.println("||      WORLD 2: Bjorndal     ||      MINION 3    ||");
-            System.out.println("====================================================\n\n");
+            System.out.println("====================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objFoss.toString());
             
@@ -695,7 +703,8 @@ public class storyTwo {
         while (objJorm.getHealth() > 0 && character.getHealth() > 0) {
             System.out.println("==================================================");
             System.out.println("||      WORLD 2: Bjorndal     ||      BOSS 2    ||");
-            System.out.println("==================================================\n\n");
+            System.out.println("==================================================\n");
+            System.out.println("\u001B[33mGold\u001B[0m: " + objIn.getGold() + "\n");
             System.out.println(character.toString());
             System.out.println(objJorm.toString());
 
@@ -891,7 +900,25 @@ public class storyTwo {
                     System.out.println(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     objIn.IncBossDropTwoCount();
-                    System.out.println("You have received " + objIn.getBossDropTwo() + "!");
+
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("\u001B[34m\n\nINVENTORY:\n\u001B[0m");
+                    System.out.print(objIn.getBossDropOne()+" = ");
+                    System.out.println("\u001B[31mIN EFFECT!: LIFESTEAL +15\u001B[0m \n");
+
+                    System.out.println("\nNEW ITEM!:\n");
+
+                    System.out.print("\u001B[32m " + objIn.getBossDropTwo() + "\u001B[0m");
+                    System.out.println("\n \u001B[31mIN EFFECT!: DAMAGE MULTIPLIER 1.8 - 2.0 \u001B[0m \n\n\n\n");
+
+                    System.out.println("You can now use LIFESTEAL and DMG MULTIPLIER at once!\n\n");
+
+                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    
+                    System.out.println("\n\n\n\n\n\nPress Enter to Continue!");
+
+                    scanner.nextLine();
+                    
                     objJorm.Serpent_ending();
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)

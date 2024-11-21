@@ -24,6 +24,12 @@ public abstract class Player {
         this.Mana = MaxMana;
         this.MaxExp = MaxExp;
     }
+
+    Inventory objIn;
+
+    public Player(Inventory objIn){
+        this.objIn = objIn;
+    }
     
     public abstract int skillOne();
     public abstract int skillTwo();
@@ -44,7 +50,8 @@ public abstract class Player {
             return true;
         }
         else{
-            System.out.println("Not enough mana!");
+            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            System.out.println("\u001B[31m\t\tNot enough mana!\u001B[0m");
             return false;
         }
     }
@@ -114,16 +121,24 @@ public abstract class Player {
         MaxHealth += 25;
         MaxMana += 25;
         MaxExp += 25;
-            
-        System.out.println("You leveled up to " + ExpLevel + "!");
+        
+        System.out.println("\u001B[32m\n\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("\tYou leveled up to " + ExpLevel + "!");
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\u001B[0m");
+
     }
 
     
+
+    
     public String toString(){
-        return Name + "'s Status:\n" +
+        
+        return Name + " (Level "+ExpLevel+")\n" +
+        
                "\nHealth: " + generateBar(Health, MaxHealth, 20, "RED") + " (" + Health + "/" + MaxHealth + ")\n" +
                "\nMana:   " + generateBar(Mana, MaxMana, 20, "BLUE") + " (" + Mana + "/" + MaxMana + ")\n" +
                "\nXP:     " + generateBar(Exp, MaxExp, 20, "YELLOW") + " (" + Exp + "/" + MaxExp + ")\n";
+               
     }
     
     
