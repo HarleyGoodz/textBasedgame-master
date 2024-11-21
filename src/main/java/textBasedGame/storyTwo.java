@@ -633,7 +633,7 @@ public class storyTwo {
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)
                     
-                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Crossbreed Priscilla.wav");
+                    audioManager.playAudio("c:\\Users\\User\\Downloads\\Dark Souls_ Chiptune Demixes - Crossbreed Priscilla.wav");
                     System.out.println("-----------------------------------------------\n");
                     System.out.println("After defeating the demons that ambushed you,"
                     + "\n you feel tired and lost in the forest..."
@@ -883,7 +883,7 @@ public class storyTwo {
                     break;
                 } else if (objJorm.getHealth() <= 0) {
                     audioManager.stopAudio();
-                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Undertale OST_ 033 - Quiet Water.wav");
+                    audioManager.playAudio("c:\\Users\\User\\Downloads\\Undertale OST_ 033 - Quiet Water.wav");
                     System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                     System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("\t "+character.getName() + " has defeated " + objJorm.getName());
