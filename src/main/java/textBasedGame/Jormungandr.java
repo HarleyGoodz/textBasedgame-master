@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Jormungandr extends Enemy{
     private int Health;
     private String Name;
+    private int MaxHealth;
     
     CenterAlign objPrint = new CenterAlign();
     ClearScreen objClear = new ClearScreen();
@@ -20,109 +21,138 @@ public class Jormungandr extends Enemy{
         Scanner scanner = new Scanner(System.in);
 
         objClear.clearScreen();
-        System.out.println("\n--------------------BACKSTORY---------------------------\n");
-        System.out.println("Once, Jormungandr was revered as a guardian spirit, a colossal serpent who ruled over an ancient, sacred land. \n"
-                + "press 'Enter' to continue....");
+        objPrint.printCentered("--------------------BACKSTORY--------------------");
+        System.out.println("");
+        objPrint.printCentered("Once, Jormungandr was revered as a guardian spirit, a colossal serpent who ruled over an ancient, sacred land.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         objClear.clearScreen();
         
         
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("His presence ensured the balance of nature, protecting the forests, rivers, and mountains from destruction. \n"
-                + "press 'Enter' to continue....");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("His presence ensured the balance of nature, protecting the forests, rivers, and mountains from destruction.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue....");
         scanner.nextLine();
         objClear.clearScreen();
         
-        System.out.println("-----------------------------------------------");
-        System.out.println("However, as the ages passed, human greed began to grow. Kings and conquerors, driven by ambition, \n"
-                + "sought to take control of serpent’s sacred land, viewing it as a powerful resource.\n"
-                + "press 'Enter' to continue....");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("However, as the ages passed, human greed began to grow. Kings and conquerors, driven by ambition,");
+        objPrint.printCentered("sought to take control of serpent’s sacred land, viewing it as a powerful resource.");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         objClear.clearScreen();
         
-        System.out.println("-----------------------------------------------");
-        System.out.println("Consumed by great anger, the serpent swore that no mortal would ever set foot in his territory again.\n"
-                + "press 'Enter' to continue....");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println();
+        objPrint.printCentered("Consumed by great anger, the serpent swore that no mortal would ever set foot in his territory again.");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         objClear.clearScreen();
         
-        System.out.println("-----------------------------------------------");
-        System.out.println("Those who dared to enter his domain would face his wrath and be consumed \n"
-                + "by the darkness that now coursed through his being."
-                + "press 'Enter' to continue....");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("Those who dared to enter his domain would face his wrath and be consumed");
+        objPrint.printCentered("by the darkness that now coursed through his being.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
     }
     
     void Serpent_ending(){
         Scanner scanner = new Scanner(System.in);
         objClear.clearScreen();
-        System.out.println("\n------------------ENDING STORY OF JORMUNGANDR-----------------------------\n");
-        System.out.println("After a fierce battle, the mighty serpent lay defeated, its colossal body trembling with \n"
-                + "the weight of centuries-old sorrow. All it ever desired was to protect the natural world"
-                + "\n\npress 'Enter' to continue....");
+        objPrint.printCentered("------------------ENDING STORY OF JORMUNGANDR------------------");
+        System.out.println("");
+        objPrint.printCentered("After a fierce battle, the mighty serpent lay defeated, its colossal body trembling with");
+        objPrint.printCentered("the weight of centuries-old sorrow. All it ever desired was to protect the natural world");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("despising the humans who relentlessly trampled upon its beauty. It was not evil, it was a guardian, \n"
-        + "a force of nature corrupted by the greed of mortals. "
-                + "\n\npress 'Enter' to continue....");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("despising the humans who relentlessly trampled upon its beauty. It was not evil, it was a guardian,");
+        objPrint.printCentered("a force of nature corrupted by the greed of mortals.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
    
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("Seeing the creature\'s true intentions, you did not strike the final blow. Instead, \n"
-        + "you hurled a powerful healing potion toward the fallen serpent. \n"
-                + "\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("Seeing the creature's true intentions, you did not strike the final blow. Instead,");
+        objPrint.printCentered("you hurled a powerful healing potion toward the fallen serpent.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("As the magic took hold, the serpent's  darkened scales began to shimmer. \n"
-                + "The player's selfless act proved that not all of humanity \n"
-                + "was consumed by greed,that some still respected the balance of nature.\n"
-                + "\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("As the magic took hold, the serpent's  darkened scales began to shimmer.");
+        objPrint.printCentered("The player's selfless act proved that not all of humanity");
+        objPrint.printCentered("was consumed by greed,that some still respected the balance of nature.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("The legendary serpent slithered forward, its massive form now a symbol of peace, not fear. \n"
-                + "\"You have restored my faith, human,\" the serpent's voice rumbled like distant thunder. "
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("The legendary serpent slithered forward, its massive form now a symbol of peace, not fear.");
+        objPrint.printCentered("\"You have restored my faith, human,\" the serpent's voice rumbled like distant thunder.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("\"Not all mortals are blind to the world's true beauty. You have shown me that humanity still has hope.\""
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("\"Not all mortals are blind to the world's true beauty. You have shown me that humanity still has hope.\"");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("With newfound trust, the serpent guided you through the twisted, never ending forest.\n"
-                + " As they reached the edge of the cursed woods, the serpent turned one final time."
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("With newfound trust, the serpent guided you through the twisted, never ending forest.");
+        objPrint.printCentered("As they reached the edge of the cursed woods, the serpent turned one final time.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("\"Thank you, human. You have proven that there is still light among your kind.\""
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("\"Thank you, human. You have proven that there is still light among your kind.\"");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("the legendary serpent vanished into the shadows, leaving the you to continue your journey.\n"
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("The legendary serpent vanished into the shadows, leaving the you to continue your journey.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
     }
     
     
     
-    public Jormungandr(String Name, int Health){
+    public Jormungandr(String Name, int MaxHealth){
         this.Name = Name;
-        this.Health = Health;
+        this.MaxHealth = MaxHealth;
+        this.Health = MaxHealth;
     }
     
     @Override
@@ -173,9 +203,8 @@ public class Jormungandr extends Enemy{
     @Override
     public String toString(){
         
-        int maxHealth = 500; 
         int barLength = 20; 
-        int filledLength = (int) ((double) Health / maxHealth * barLength);
+        int filledLength = (int) ((double) Health / MaxHealth * barLength);
     
         
         final String RED = "\u001B[31m"; 
@@ -193,6 +222,6 @@ public class Jormungandr extends Enemy{
         healthBar.append("]\n\n\n\n\n\n");
     
         
-        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " " + healthBar.toString();
 }
 }

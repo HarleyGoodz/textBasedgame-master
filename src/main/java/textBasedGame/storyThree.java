@@ -8,8 +8,8 @@ package textBasedGame;
  *
  * @author Silent Voice
  */
-import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 public class storyThree {
     Tiamat objTia = new Tiamat("Tiamat",900);
     Anzu objAnzu = new Anzu("Anzu",200);
@@ -33,32 +33,40 @@ public class storyThree {
     Scanner scanner = new Scanner(System.in);
     openShop objShop = new openShop(objIn);
     audioManager.stopAudio();
-    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Chaos Witch Quelaag.wav");
+    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Chaos Witch Quelaag.wav");
     
-    System.out.println("\n---------THE FINAL CHAPTER---------------\n");
-    System.out.println("You have arrived at the final wall... A hellish journey awaits you.");
-    System.out.println("Press 'Enter' to continue");
+    objPrint.printCentered("---------THE FINAL CHAPTER---------");
+    System.out.println("");
+    objPrint.printCentered("You have arrived at the final wall... A hellish journey awaits you.");
+    System.out.println("");
+    objPrint.printCentered("Press 'Enter' to Continue");
     scanner.nextLine();
 
     
     objClear.clearScreen();
-    System.out.println("----------------------------------------------\n");
-    System.out.println("As you have exited the forest, a bright red sky welcomed you showing its immense power of darkness...");
-    System.out.println("Press 'Enter' to continue");
+    objPrint.printCentered("----------------------------------------------");
+    System.out.println("");
+    objPrint.printCentered("As you have exited the forest, a bright red sky welcomed you showing its immense power of darkness...");
+    System.out.println("");
+    objPrint.printCentered("Press 'Enter' to Continue");
     scanner.nextLine();
     
 
     objClear.clearScreen();
-    System.out.println("----------------------------------------------\n");
-    System.out.println("As you took a couple of steps in that world, An anzu landed before you, interfering your journey and intends to"+ 
+    objPrint.printCentered("----------------------------------------------");
+    System.out.println("");
+    objPrint.printCentered("As you took a couple of steps in that world, An anzu landed before you, interfering your journey and intends to"+ 
     " kill you....");
-    System.out.println("Press 'Enter' to continue");
+    System.out.println("");
+    objPrint.printCentered("Press 'Enter' to Continue");
     scanner.nextLine();
     
     objClear.clearScreen();
-    System.out.println("----------------------------------------------\n");
-    System.out.println("Prepare for Battle!");
-    System.out.println("Press 'Enter' to continue");
+    objPrint.printCentered("----------------------------------------------");
+    System.out.println("");
+    objPrint.printCentered("Prepare for Battle!");
+    System.out.println("");
+    objPrint.printCentered("Press 'Enter' to Continue");
     scanner.nextLine();
 
     objClear.clearScreen();
@@ -253,31 +261,37 @@ public class storyThree {
                     break;
                 } else if (objAnzu.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t"+character.getName() + " has defeated " + objAnzu.getName());
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objAnzu.getName());
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (100 - 75 + 1)) + 75;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     TurnCounter = 0;
-                    System.out.println("\n--------------------VICTORY!--------------------------\n");
-                    System.out.println("You have successfully defended yourself, but it's not over yet!");
-                    System.out.println("Press 'Enter' to continue");
+                    objPrint.printCentered("--------------------VICTORY!--------------------");
+                    System.out.println("");
+                    objPrint.printCentered("You have successfully defended yourself, but it's not over yet!");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
 
                     objClear.clearScreen();
-                    System.out.println("----------------------------------------------\n");
-                    System.out.println("As two of the monsters charged infront of you, avenging their ally!");
-                    System.out.println("Press 'Enter' to continue");
+                    objPrint.printCentered("----------------------------------------------");
+                    System.out.println("");
+                    objPrint.printCentered("As two of the monsters charged infront of you, avenging their ally!");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("----------------------------------------------\n");
-                    System.out.println("Brace yourself! PREPARE FOR BATTLE 2!");
-                    System.out.println("Press 'Enter' to FIGHT");
+                    objPrint.printCentered("----------------------------------------------");
+                    System.out.println("");
+                    objPrint.printCentered("Brace yourself! Prepare for the Next Batte!");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Fight!");
                     scanner.nextLine();
                     // Rewards logic can go here (e.g., coins)
                     break;
@@ -699,29 +713,33 @@ public class storyThree {
                     break;
                 } else if (objHum.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t "+character.getName() + " has defeated " + objHum.getName());
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objHum.getName());
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (100 - 75 + 1)) + 75;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     TurnCounter = 0;
 
                     audioManager.stopAudio();
-                    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Centipede Demon.wav");
-                    System.out.println("\n----------------------------------------------\n");
-                    System.out.println("After defeating those who attempted to trample your path, you managed to prevail on your adventure,\n"+
-                    "you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
-                    System.out.println("\nPress 'Enter' to continue");
+                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Centipede Demon.wav");
+                    objPrint.printCentered("----------------------------------------------");
+                    System.out.println("");
+                    objPrint.printCentered("After defeating those who attempted to trample your path, you managed to prevail on your adventure,");
+                    objPrint.printCentered("you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("----------------------------------------------\n");
-                    System.out.println("After climbing the top of the mountain, the three headed dragon roars showcasing its greatness and power.");
-                    System.out.println("\nPress 'Enter' to continue");
+                    objPrint.printCentered("----------------------------------------------");
+                    System.out.println("");
+                    objPrint.printCentered("After climbing the top of the mountain, the three headed dragon roars showcasing its greatness and power.");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objTia.Tiamat_Backstory();
@@ -943,85 +961,105 @@ public class storyThree {
                     break;
                 } else if (objTia.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t "+character.getName() + " has defeated " + objTia.getName());
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objTia.getName());
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (250 - 100 + 1)) + 100;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     audioManager.stopAudio();
-        audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Character Config [bonus].wav");
-        objClear.clearScreen();
-        System.out.println("\n-=-=-=-=-=-=-=-=-=-=-TIAMAT HAS BEEN DEFEATED!-=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("The battle has been long and brutal. You are bruised and battered but still stands.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Character Config [bonus].wav");
+
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-TIAMAT HAS BEEN DEFEATED!-=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("");
+                    objPrint.printCentered("The battle has been long and brutal. You are bruised and battered but still stands.\n");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
 
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("Then, Tiamat unleashes her final assault, an overwhelming surge of energy that threatens to consume all in its path.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("");
+                    objPrint.printCentered("Then, Tiamat unleashes her final assault, an overwhelming surge of energy that threatens to consume all in its path.\n");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("You have been hit! The surge of raging pain is flowing through your veins.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
+                    System.out.println("");
+                    objPrint.printCentered("You have been hit! The surge of raging pain is flowing through your veins.\n");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
 
 
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("Tiamat has fallen and so are you.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
+                    System.out.println("");
+                    objPrint.printCentered("Tiamat has fallen and so are you.\n");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println(". . . *silence*...\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
+                    System.out.println("");
+                    objPrint.printCentered(". . . *silence*...");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to continue");
+                    scanner.nextLine();
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println(". . . \n");
-         System.out.println("Press 'Enter' to open your eyes");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
+                    System.out.println("");
+                    objPrint.printCentered(". . . ");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to open your eyes");
+                    scanner.nextLine();
 
 
          
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("The bright red sky is no more, but you've noticed that you're at the forest where Jormangandr lives.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("");
+                    objPrint.printCentered("The bright red sky is no more, but you've noticed that you're at the forest where Jormangandr lives.\n");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
 
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("Turns out, after defeating the creator of creatures (Tiamat),\n"
-        + "Jormungandr took your body and healed you with its mystic power. \n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("");
+                    objPrint.printCentered("Turns out, after defeating the creator of creatures (Tiamat),");
+                    objPrint.printCentered("Jormungandr took your body and healed you with its mystic power.");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
         
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("You are alone but victorious as the evil forces are no more. \n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("");
+                    objPrint.printCentered("You are alone but victorious as the evil forces are no more.");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
 
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("You stood up and walk your path way home.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+                    objClear.clearScreen();
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+                    System.out.println("");
+                    objPrint.printCentered("You stood up and walk your path way home.");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
+                    scanner.nextLine();
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)
                     break;

@@ -11,9 +11,11 @@ package textBasedGame;
 public class Humbaba extends Minion {
     private int Health;
     private String Name;
+    private int MaxHealth;
     
-    public Humbaba(String Name, int Health){
-        this.Health = Health;
+    public Humbaba(String Name, int MaxHealth){
+        this.MaxHealth = MaxHealth;
+        this.Health = MaxHealth;
         this.Name = Name;
     }
     
@@ -50,9 +52,8 @@ public class Humbaba extends Minion {
     @Override
     public String toString(){
         
-        int maxHealth = 200; 
         int barLength = 20; 
-        int filledLength = (int) ((double) Health / maxHealth * barLength);
+        int filledLength = (int) ((double) Health / MaxHealth * barLength);
     
         
         final String RED = "\u001B[31m"; 
@@ -70,6 +71,6 @@ public class Humbaba extends Minion {
         healthBar.append("]\n\n\n\n\n\n");
     
         
-        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " " + healthBar.toString();
 }
 }

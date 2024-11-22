@@ -12,12 +12,14 @@ import java.util.Scanner;
 public class KrevMalak extends Enemy {
     private int Health;
     private String Name;
+    private int MaxHealth;
 
     ClearScreen objClear = new ClearScreen();
     CenterAlign objPrint = new CenterAlign();
     
-    public KrevMalak(String Name,int Health){
-        this.Health = Health;
+    public KrevMalak(String Name,int MaxHealth){
+        this.MaxHealth = MaxHealth;
+        this.Health = MaxHealth;
         this.Name = Name;
     }
     
@@ -69,9 +71,8 @@ public class KrevMalak extends Enemy {
     @Override
     public String toString(){
         
-        int maxHealth = 150; 
         int barLength = 20; 
-        int filledLength = (int) ((double) Health / maxHealth * barLength);
+        int filledLength = (int) ((double) Health / MaxHealth * barLength);
     
         
         final String RED = "\u001B[31m"; 
@@ -89,24 +90,28 @@ public class KrevMalak extends Enemy {
         healthBar.append("]\n\n\n\n\n\n");
     
         
-        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " " + healthBar.toString();
 }
     
     public void Krev_BackStory(){
         
         Scanner scanner = new Scanner(System.in);
         objClear.clearScreen();
-        System.out.println("----------------BACKSTORY-------------------------------\n");
-        System.out.println("Krev Malak, a god blinded by greed and an insatiable hunger for power. \n"
-                + "The more suffering he caused, the more powerful he becomes, feeding off the fear and hopelessness of his victims."
-                + "\n\npress 'Enter to continue");
+        objPrint.printCentered("----------------BACKSTORY----------------");
+        System.out.println("");
+        objPrint.printCentered("Krev Malak, a god blinded by greed and an insatiable hunger for power.");
+        objPrint.printCentered("The more suffering he caused, the more powerful he becomes, feeding off the fear and hopelessness of his victims.");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("one that went beyond personal gain,he would become the embodiment of despair itself,\n"
-                + " a living nightmare capable of plunging the world into endless darkness. \n"
-                + "\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println();
+        objPrint.printCentered("One that went beyond personal gain,he would become the embodiment of despair itself,");
+        objPrint.printCentered("a living nightmare capable of plunging the world into endless darkness.");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
     }
     
@@ -114,13 +119,14 @@ public class KrevMalak extends Enemy {
         Scanner scanner = new Scanner(System.in);
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("As you spot Krev Malak seated on his throne, a massive battle looms,\n"
-                + " shrouded in shadows and flames. With a fierce charge, you teleported to Krev,\n"
-+ "unleashing your skills in a devastating attack aimed at annihilating the god somehow, Krev blocked your attack...\n"
-               + "-----------------------------------------------\n"
-                + "PREPARE FOR BATTLE!\n"
-+ "\npress 'Enter' to FIGHT!");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("As you spot Krev Malak seated on his throne, a massive battle looms,");
+        objPrint.printCentered("shrouded in shadows and flames. With a fierce charge, you teleported to Krev,");
+        objPrint.printCentered("unleashing your skills in a devastating attack aimed at annihilating the god somehow, Krev blocked your attack...");
+        objPrint.printCentered("-----------------------------------------------");
+        objPrint.printCentered("PREPARE FOR BATTLE!");
+        objPrint.printCentered("Press 'Enter' to Fight!");
         scanner.nextLine();
     }
     
@@ -128,18 +134,21 @@ public class KrevMalak extends Enemy {
         Scanner scanner = new Scanner(System.in);
         
         objClear.clearScreen();
-        System.out.println("\n-------------------VICTORY ENDING----------------------------\n");
-        System.out.println("Finally, the God of Despair can prevail no more\n"
-                + "As Krev lies defeated, you stood at the edge of victory and honor, while Krev is in the brink of death,\n"
-                + "the connection between the underworld and the mortal realm is weakened,"
-                + "\n\npress 'Enter to continue");
+        objPrint.printCentered("-------------------VICTORY ENDING-------------------");
+        System.out.println();
+        objPrint.printCentered("Finally, the God of Despair can prevail no more");
+        objPrint.printCentered("As Krev lies defeated, you stood at the edge of victory and honor, while Krev is in the brink of death,");
+        objPrint.printCentered("the connection between the underworld and the mortal realm is weakened,");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("The victory is sweet, a glorious battle indeed.\n"
-                + "you sheath your weapon and walked away, leaving the body of Krev Malak behind, knowing that the real fight has just begun.\n"
-                + "\npress 'Enter' to end the journey");
+        objPrint.printCentered("-----------------------------------------------");
+        objPrint.printCentered("The victory is sweet, a glorious battle indeed.");
+        objPrint.printCentered("you sheath your weapon and walked away, leaving the body of Krev Malak behind, knowing that the real fight has just begun.");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to End the Journey.");
         scanner.nextLine();
     }
     

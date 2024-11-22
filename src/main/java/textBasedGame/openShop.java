@@ -100,7 +100,7 @@ public class openShop {
                     System.out.println();
                     
                     objClear.clearScreen();
-                    System.out.println("\u001B[31m\tYou have exited the shop.\n\n\u001B[0m");
+                    objPrint.printCentered("\u001B[31m\t\tYou have exited the shop.\n\n\u001B[0m");
                     buyCount = 0;
                     break;  
                 } else {

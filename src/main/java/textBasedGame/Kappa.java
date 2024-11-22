@@ -11,11 +11,13 @@ package textBasedGame;
 public class Kappa extends Minion{
     private int Health;
     private String Name;
+    private int MaxHealth;
     
     
-    public Kappa(String Name, int Health){
+    public Kappa(String Name, int MaxHealth){
+        this.MaxHealth = MaxHealth;
         this.Name = Name;
-        this.Health = Health;
+        this.Health = MaxHealth;
     }
     
     @Override
@@ -50,9 +52,8 @@ public class Kappa extends Minion{
     @Override
     public String toString(){
         
-        int maxHealth = 100; 
         int barLength = 20; 
-        int filledLength = (int) ((double) Health / maxHealth * barLength);
+        int filledLength = (int) ((double) Health / MaxHealth * barLength);
     
         
         final String RED = "\u001B[31m"; 
@@ -72,7 +73,7 @@ public class Kappa extends Minion{
         
     
         
-        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " " + healthBar.toString();
 
         
 }

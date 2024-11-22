@@ -11,10 +11,12 @@ package textBasedGame;
 public class Anzu extends Minion{
     private int Health;
     private String Name;
+    private int MaxHealth;
     
-    public Anzu(String Name, int Health){
+    public Anzu(String Name, int MaxHealth){
+        this.MaxHealth = MaxHealth;
         this.Name = Name;
-        this.Health = Health;
+        this.Health = MaxHealth;
     }
     
     
@@ -52,7 +54,7 @@ public class Anzu extends Minion{
         
         int maxHealth = 200; 
         int barLength = 20; 
-        int filledLength = (int) ((double) Health / maxHealth * barLength);
+        int filledLength = (int) ((double) Health / MaxHealth * barLength);
     
         
         final String RED = "\u001B[31m"; 
@@ -70,6 +72,6 @@ public class Anzu extends Minion{
         healthBar.append("]\n\n\n\n\n\n");
     
         
-        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " " + healthBar.toString();
 }
 }

@@ -33,36 +33,44 @@ public class storyTwo {
        openShop objShop = new openShop(objIn);
        
        audioManager.stopAudio();
-       audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Knight Artorias.wav");
+       audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Knight Artorias.wav");
     
        
-       System.out.println("-------------------A NEW JOURNEY HAS BEGUN!----------------------------\n");
-        System.out.println("This is just the starting point of your adventure. Be wary of your surroundings as demons may appear\n"
-                + "out of sight and might take your life!\n"
-                + "\n\npress 'Enter' to continue");
+       objPrint.printCentered("-------------------A NEW JOURNEY HAS BEGUN!-------------------");
+       System.out.println("");
+       objPrint.printCentered("This is just the starting point of your adventure. Be wary of your surroundings as demons may appear");
+       objPrint.printCentered("out of sight and might take your life!");
+       System.out.println();
+       objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
 
         
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("As you walk accross the dark forest, having no vision in sight, fogs are thick and you can hear your own breathing \n"
-                + "because of the silence and eerie feeling of the forest!"
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println("");
+        objPrint.printCentered("As you walk accross the dark forest, having no vision in sight, fogs are thick and you can hear your own breathing");
+        objPrint.printCentered("because of the silence and eerie feeling of the forest!");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------\n");
-        System.out.println("As you walk by... you can feel at any moment that you can get killed...\n"
-                + "strange sounds are getting louder and louder"
-                + "\n\npress 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println();
+        objPrint.printCentered("As you walk by... you can feel at any moment that you can get killed...");
+        objPrint.printCentered("strange sounds are getting louder and louder");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("------------------CONFRONTATION!-----------------------------\n");
-        System.out.println("The demons screamed and charged at you, revealing their location!\n"
-                + "3 of them appeared and sorrounded you!"
-                + "\n\npress 'Enter' to FIGHT!!!");
+        objPrint.printCentered("------------------CONFRONTATION!------------------");
+        System.out.println();
+        objPrint.printCentered("The demons screamed and charged at you, revealing their location!");
+        objPrint.printCentered("3 of them appeared and sorrounded you!");
+        System.out.println();
+        objPrint.printCentered("Press 'Enter' to Fight!");
                 
         scanner.nextLine();
         objClear.clearScreen();
@@ -631,68 +639,79 @@ public class storyTwo {
                 } else if (objFoss.getHealth() <= 0) {
                     audioManager.stopAudio();
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t "+character.getName() + " has defeated " + objFoss.getName());                    
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objFoss.getName());                    
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (100 - 75 + 1)) + 75;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     TurnCounter = 0;
                     // Rewards logic can go here (e.g., coins)
                     
-                    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Crossbreed Priscilla.wav");
-                    System.out.println("-----------------------------------------------\n");
-                    System.out.println("After defeating the demons that ambushed you,"
-                    + "\n you feel tired and lost in the forest..."
-                    + "\n\npress 'Enter' to continue");
+                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Crossbreed Priscilla.wav");
+                    objPrint.printCentered("-----------------------------------------------\n");
+                    System.out.println();
+                    objPrint.printCentered("After defeating the demons that ambushed you,");
+                    objPrint.printCentered("you feel tired and lost in the forest...");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("-----------------------------------------------\n");
-                    System.out.println("As you sat down and lay your head, wanting to take a break but suddenly\n"
-                    + "something weird is coming...."
-                    + "\n\npress 'Enter' to continue");
+                    objPrint.printCentered("-----------------------------------------------");
+                    System.out.println();
+                    objPrint.printCentered("As you sat down and lay your head, wanting to take a break but suddenly");
+                    objPrint.printCentered("something weird is coming....");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("------------------AMBUSHED!!!-----------------------------\n");
-                    System.out.println("The Earth began to rumble....\n"
-                    + "Tress began to fall...\n"
-                    + "an ear-splitting scream ripped through the darkness...\n"
-                    + "\n\npress 'Enter' to continue");
+                    objPrint.printCentered("------------------AMBUSHED------------------");
+                    objPrint.printCentered("The Earth began to rumble....");
+                    objPrint.printCentered("Tress began to fall...");
+                    objPrint.printCentered("an ear-splitting scream ripped through the darkness...");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("-----------------------------------------------\n");
-                    System.out.println("As you looked up into the heavens...\n"
-                    + "A giant snake appeared!\n"
-                    + "The LEGENDARY Jormungandr!!\n"
-                    + "\n\npress 'Enter' to continue");
+                    objPrint.printCentered("-----------------------------------------------");
+                    System.out.println();
+                    objPrint.printCentered("As you looked up into the heavens...");
+                    objPrint.printCentered("A giant snake appeared!");
+                    objPrint.printCentered("The Legendary Jormungandr!");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("-----------------------------------------------\n");
-                    System.out.println("The colossal serpent lunges forward, its jaws wide open, ready to engulf you in a monstrous,\n"
-                    + " bone-crushing strike!\n"
-                    + "\n\npress 'Enter' to DODGE!!!");
+                    objPrint.printCentered("-----------------------------------------------");
+                    System.out.println();
+                    objPrint.printCentered("The colossal serpent lunges forward, its jaws wide open, ready to engulf you in a monstrous,");
+                    objPrint.printCentered("bone-crushing strike!");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Dodge!");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("-----------------------------------------------\n");
-                    System.out.println("You swiftly evade the serpent's vicious lunge, adrenaline surging through your veins like wildfire. \n"
-                    + " The air crackles with tension as you prepare for the clash of a lifetime\n"
-                    + "an epic battle between a colossal, legendary beast and a mere mortal daring to defy fate!\n"
-                    + "\n\npress 'Enter' to continue!!!");
+                    objPrint.printCentered("-----------------------------------------------");
+                    System.out.println();
+                    objPrint.printCentered("You swiftly evade the serpent's vicious lunge, adrenaline surging through your veins like wildfire.");
+                    objPrint.printCentered("The air crackles with tension as you prepare for the clash of a lifetime");
+                    objPrint.printCentered("an epic battle between a colossal, legendary beast and a mere mortal daring to defy fate!");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("-------------------PREPARE FOR BATTLE!!!---------------------------\n");
-                    System.out.println("Your draw your weapon, setting your heart to ablaze, eradicating the tiring feeling of the recent battle\n"
-                    + "you have faced!"
-                    + "\n\npress 'Enter' to FIGHT!!!!!");
+                    objPrint.printCentered("-------------------PREPARE FOR BATTLE-------------------");
+                    objPrint.printCentered("Your draw your weapon, setting your heart to ablaze, eradicating the tiring feeling of the recent battle you have faced!");
+                    System.out.println();
+                    objPrint.printCentered("Press 'Enter' to Fight!");
                     scanner.nextLine();
                     
                     break;
@@ -893,34 +912,35 @@ public class storyTwo {
                     break;
                 } else if (objJorm.getHealth() <= 0) {
                     audioManager.stopAudio();
-                    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Undertale OST_ 033 - Quiet Water.wav");
+                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Undertale OST_ 033 - Quiet Water.wav");
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t "+character.getName() + " has defeated " + objJorm.getName());
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objJorm.getName());
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (250 - 100 + 1)) + 100;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     objIn.IncBossDropTwoCount();
 
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    System.out.println("\u001B[34m\n\nINVENTORY:\n\u001B[0m");
-                    System.out.print(objIn.getBossDropOne()+" = ");
-                    System.out.println("\u001B[31m IN EFFECT!: LIFESTEAL\u001B[0m \n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("");
+                    System.out.println("\u001B[34m\t\t\t\t\tINVENTORY:\n\u001B[0m");
+                    System.out.println("\t\t\t\t\t" + objIn.getBossDropOne() + " = " + "\u001B[31m IN EFFECT!: LIFESTEAL\u001B[0m \n");
 
-                    System.out.println("\nNEW ITEM!:\n");
+                    System.out.println("\t\t\t\t\tNEW ITEM!:");
 
-                    System.out.print("\u001B[32m" + objIn.getBossDropTwo() + "\u001B[0m");
-                    System.out.println("\n\u001B[34mIN EFFECT!: DAMAGE MULTIPLIER 1.8 - 2.0\u001B[0m");
+                    System.out.println("\t\t\t\t\t\u001B[32m" + objIn.getBossDropTwo() + "\u001B[0m");
+                    System.out.println("\t\t\t\t\t\u001B[34mIN EFFECT!: DAMAGE MULTIPLIER 1.8 - 2.0\u001B[0m");
 
-                    System.out.println("\nYou can now use LIFESTEAL and DMG MULTIPLIER at once!");
+                    System.out.println("");
+                    objPrint.printCentered("You can now use LIFESTEAL and DMG MULTIPLIER at once!");
 
-                    System.out.println("\n\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     
-                    System.out.println("\n\n\n\n\n\nPress Enter to Continue!");
+                    objPrint.printCentered("Press 'Enter' to Continue!");
 
                     scanner.nextLine();
                     
@@ -939,14 +959,15 @@ public class storyTwo {
         if(character.getHealth() > 0){
             objClear.clearScreen();
             objShop.Shop(scanner);
-            System.out.println("        ===========================");
-            System.out.println("        ||  Healing potions: " + objIn.getItemOneCount()+"    ||");
-            System.out.println("        ||  Mana potions: " + objIn.getItemTwoCount()+"       ||");
-            System.out.println("        ===========================\n\n");
+            objPrint.printCentered("        ===========================");
+            objPrint.printCentered("        ||  Healing potions: " + objIn.getItemOneCount()+"    ||");
+            objPrint.printCentered("        ||  Mana potions: " + objIn.getItemTwoCount()+"       ||");
+            objPrint.printCentered("        ===========================\n\n");
 
             System.out.println("\n\n\n\n");
 
             scanner.nextLine();
+            
         }
     }
 }

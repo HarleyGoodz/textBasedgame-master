@@ -21,16 +21,18 @@ public class storyOne {
         Scanner scanner = new Scanner(System.in);
         openShop objShop = new openShop(objIn);
 
-        audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Undertale OST_ 014 - Heartache - Misaki.wav");
+        audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Undertale OST_ 014 - Heartache - Misaki.wav");
 
         
 
         
         
         objClear.clearScreen();
-        System.out.println("-----------------------------------------------");
-        System.out.println("\nPrepare for battle as two of the demons appeared in your path, GET READY TO KILL!\n"
-                + "\n press 'Enter' to continue");
+        objPrint.printCentered("-----------------------------------------------");
+        System.out.println();
+        objPrint.printCentered("Prepare for battle as two of the demons appeared in your path, GET READY TO KILL!");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to continue");
         scanner.nextLine();
         objClear.clearScreen();
         
@@ -364,28 +366,33 @@ public class storyOne {
                     break;
                 } else if (objHyo.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t"+character.getName() + " has defeated " + objHyo.getName());
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objHyo.getName());
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (100 - 75 + 1)) + 75;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     TurnCounter = 0;
                     
+                    
 
-                    System.out.println("------------------------------------------\n");
-                    System.out.println("After killing the 2 demons that blocked your path... \n"
-                    + "you continued at your journey, smelling the scent of a godly power...."
-                    + "\n\nPress Enter to continue");
+                    objPrint.printCentered("------------------------------------------");
+                    System.out.println("");
+                    objPrint.printCentered("After killing the 2 demons that blocked your path...");
+                    objPrint.printCentered("you continued at your journey, smelling the scent of a godly power....");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");    
                     scanner.nextLine();
                     
                     objClear.clearScreen();
-                    System.out.println("------------------ARRIVAL!-----------------------\n");
-                    System.out.println("You have finally arrived at the hellish domain of KREV MALAK!\n"
-                    + "\npress 'Enter' to continue");
+                    objPrint.printCentered("------------------ARRIVAL!------------------");
+                    System.out.println("");
+                    objPrint.printCentered("You have finally arrived at the hellish domain of KREV MALAK!");
+                    System.out.println("");
+                    objPrint.printCentered("Press 'Enter' to Continue");
                     scanner.nextLine();
                     
                     objKrev.Krev_BackStory();
@@ -401,7 +408,7 @@ public class storyOne {
         }
 
         audioManager.stopAudio();
-        audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Iron Golem.wav");
+        audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Iron Golem.wav");
         objClear.clearScreen();
     
         while (objKrev.getHealth() > 0 && character.getHealth() > 0) {
@@ -574,28 +581,27 @@ public class storyOne {
                     break;
                 } else if (objKrev.getHealth() <= 0) {
                     audioManager.stopAudio();
-                    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\8-bit RPG Music  Victory Theme.wav");
+                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\8-bit RPG Music  Victory Theme.wav");
                     objClear.clearScreen();
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                    System.out.println("\t "+ character.getName() + " has defeated " + objKrev.getName());
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                    objPrint.printCentered(character.getName() + " has defeated " + objKrev.getName());
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n");
                     gold = (int) (Math.random() * (250 - 100 + 1)) + 100;
                     objIn.setGold(gold);
-                    System.out.println(character.getName() + " has earned " + gold + " gold!");
+                    objPrint.printCentered(character.getName() + " has earned " + gold + " gold!");
                     Exp = (int) (Math.random() * (25 - 15 + 1)) + 15;
-                    System.out.println(character.getName() + " have received " + Exp + " XP!");
+                    objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     objIn.IncBossDropOneCount();
+
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                    objPrint.printCentered("\t\u001B[32mYOU HAVE RECEIVED '" + objIn.getBossDropOne() + "'\u001B[0m ");
+                    objPrint.printCentered("\t\u001B[31mIN EFFECT!: LIFESTEAL +15\u001B[0m");
+
+                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     
-
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-                    System.out.println("\u001B[32m\n\n \tYOU HAVE RECEIVED '" + objIn.getBossDropOne() + "'\u001B[0m \n\n");
-                    System.out.println("\t \u001B[31mIN EFFECT!: LIFESTEAL +15\u001B[0m \n\n\n\n");
-
-                    System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                    
-                    System.out.println("\n\n\n\n\n\nPress Enter to Continue!");
+                    objPrint.printCentered("Press 'Enter' to Continue!");
 
                     scanner.nextLine();
                     objKrev.Krev_Defeat();
@@ -614,10 +620,10 @@ public class storyOne {
         if(character.getHealth() > 0){
             objClear.clearScreen();
             objShop.Shop(scanner);
-            System.out.println("        ===========================");
-            System.out.println("        ||  Healing potions: " + objIn.getItemOneCount()+"    ||");
-            System.out.println("        ||  Mana potions: " + objIn.getItemTwoCount()+"       ||");
-            System.out.println("        ===========================\n\n");
+            objPrint.printCentered("        ===========================");
+            objPrint.printCentered("        ||  Healing potions: " + objIn.getItemOneCount()+"    ||");
+            objPrint.printCentered("        ||  Mana potions: " + objIn.getItemTwoCount()+"       ||");
+            objPrint.printCentered("        ===========================\n\n");
 
             System.out.println("\n\n\n\n");
 

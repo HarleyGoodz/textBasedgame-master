@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Tiamat extends Enemy{
     private int Health;
     private String Name;
+    private int MaxHealth;
 
     CenterAlign objPrint = new CenterAlign();
     ClearScreen objClear = new ClearScreen();
@@ -22,9 +23,10 @@ public class Tiamat extends Enemy{
         this.audioManager = audioManager;
     }
     
-    public Tiamat(String Name, int Health){
+    public Tiamat(String Name, int MaxHealth){
+        this.MaxHealth = MaxHealth;
         this.Name = Name;
-        this.Health = Health;
+        this.Health = MaxHealth;
     }
 
     
@@ -77,9 +79,8 @@ public class Tiamat extends Enemy{
     @Override
     public String toString(){
         
-        int maxHealth = 900; 
         int barLength = 20; 
-        int filledLength = (int) ((double) Health / maxHealth * barLength);
+        int filledLength = (int) ((double) Health / MaxHealth * barLength);
     
         
         final String RED = "\u001B[31m"; 
@@ -97,32 +98,39 @@ public class Tiamat extends Enemy{
         healthBar.append("]\n\n\n\n\n\n");
     
         
-        return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
+        return Name + "'s Health: " + Health + "/" + MaxHealth + " " + healthBar.toString();
 }
 
     public void Tiamat_Backstory(){
         Scanner scanner = new Scanner(System.in);
+
         objClear.clearScreen();
-        System.out.println("\n-=-=-=-=-=-=-=-=-=-=-BACKSTORY-=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("Tiamat, a primordial being of chaos and creation, born from the very essence of the cosmos.\n"+
-        "She existed in the abyss, a vast sea of raw,\n"+
-         "untamed power, where stars and worlds were yet to be formed.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-BACKSTORY-=-=-=-=-=-=-=-=-=-=-");
+        System.out.println("");
+        objPrint.printCentered("Tiamat, a primordial being of chaos and creation, born from the very essence of the cosmos.");
+        objPrint.printCentered("She existed in the abyss, a vast sea of raw,");
+        objPrint.printCentered("untamed power, where stars and worlds were yet to be formed.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to continue");
+        scanner.nextLine();
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("Tiamat's purpose was to give birth to life, but her creations were monstrous, \n"+
-        "chaotic beings born from her wrath and untethered energy.\n");
-         System.out.println("Press 'Enter' to continue");
-         scanner.nextLine();
+        objClear.clearScreen();
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+        System.out.println("");
+        objPrint.printCentered("Tiamat's purpose was to give birth to life, but her creations were monstrous,");
+        objPrint.printCentered("chaotic beings born from her wrath and untethered energy.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to continue");
+        scanner.nextLine();
 
 
-         objClear.clearScreen();
-         System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
-        System.out.println("Your mission is to annihilate this being, to stop her hideous creations in conquering your world!\n");
-         System.out.println("Press 'Enter' to FIGHT");
-         scanner.nextLine();
+        objClear.clearScreen();
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-");
+        System.out.println("");
+        objPrint.printCentered("Your mission is to annihilate this being, to stop her hideous creations in conquering your world!");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Fight!");
+        scanner.nextLine();
     }
 
     

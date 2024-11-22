@@ -49,7 +49,7 @@ public class MainGame {
         System.out.println("\n\n\n");
 
         
-        File file = new File("C:\\\\Users\\\\Prince Tabanas\\\\Documents\\\\WALLS 1\\\\textBasedgame-master\\\\OST\\\\Starting.wav");
+        File file = new File("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Starting.wav");
         objClear.clearScreen();
         System.out.println("\n\n\n\n\n\n");
         try {
@@ -63,11 +63,11 @@ public class MainGame {
                 try {
                     String[] text = {
                         
-                        "\033[38;5;160m\t\t▄▄▌ ▐ ▄▌ ▄▄▄· ▄▄▌  ▄▄▌  .▄▄ ·           ·▄▄▄    ▄▄▄▄▄ ▄ .▄▄▄▄ .    ·▄▄▄ ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ . ▐ ▄ \033[0m",
-                        "\033[38;5;196m\t\t██· █▌▐█▐█ ▀█ ██•  ██•  ▐█ ▀.     ▪     ▐▄▄·    •██  ██▪▐█▀▄.▀·    ▐▄▄·▐█ ▀█ ██•  ██•  ▀▄.▀·•█▌▐█\033[0m",
-                        "\033[38;5;203m\t\t██▪▐█▐▐▌▄█▀▀█ ██▪  ██▪  ▄▀▀▀█▄     ▄█▀▄ ██▪      ▐█.▪██▀▐█▐▀▀▪▄    ██▪ ▄█▀▀█ ██▪  ██▪  ▐▀▀▪▄▐█▐▐▌\033[0m",
-                        "\033[38;5;210m\t\t▐█▌██▐█▌▐█ ▪▐▌▐█▌▐▌▐█▌▐▌▐█▄▪▐█    ▐█▌.▐▌██▌.     ▐█▌·██▌▐▀▐█▄▄▌    ██▌.▐█ ▪▐▌▐█▌▐▌▐█▌▐▌▐█▄▄▌██▐█▌\033[0m",
-                        "\033[38;5;216m\t\t ▀▀▀▀ ▀▪ ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀▀      ▀█▄▀▪▀▀▀      ▀▀▀ ▀▀▀ · ▀▀▀     ▀▀▀  ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀ ▀▀ █▪\033[0m"
+                        "\033[38;5;160m\t\t\t▄▄▌ ▐ ▄▌ ▄▄▄· ▄▄▌  ▄▄▌  .▄▄ ·           ·▄▄▄    ▄▄▄▄▄ ▄ .▄▄▄▄ .    ·▄▄▄ ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ . ▐ ▄ \033[0m",
+                        "\033[38;5;196m\t\t\t██· █▌▐█▐█ ▀█ ██•  ██•  ▐█ ▀.     ▪     ▐▄▄·    •██  ██▪▐█▀▄.▀·    ▐▄▄·▐█ ▀█ ██•  ██•  ▀▄.▀·•█▌▐█\033[0m",
+                        "\033[38;5;203m\t\t\t██▪▐█▐▐▌▄█▀▀█ ██▪  ██▪  ▄▀▀▀█▄     ▄█▀▄ ██▪      ▐█.▪██▀▐█▐▀▀▪▄    ██▪ ▄█▀▀█ ██▪  ██▪  ▐▀▀▪▄▐█▐▐▌\033[0m",
+                        "\033[38;5;210m\t\t\t▐█▌██▐█▌▐█ ▪▐▌▐█▌▐▌▐█▌▐▌▐█▄▪▐█    ▐█▌.▐▌██▌.     ▐█▌·██▌▐▀▐█▄▄▌    ██▌.▐█ ▪▐▌▐█▌▐▌▐█▌▐▌▐█▄▄▌██▐█▌\033[0m",
+                        "\033[38;5;216m\t\t\t ▀▀▀▀ ▀▪ ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀▀      ▀█▄▀▪▀▀▀      ▀▀▀ ▀▀▀ · ▀▀▀     ▀▀▀  ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀ ▀▀ █▪\033[0m"
                     };
                     
                     // Loop through each line
@@ -90,25 +90,25 @@ public class MainGame {
 
                     if (choice == 1) {
                         objClear.clearScreen();
-                        objPrint.printCentered("The game has started!\n");
-                        objPrint.printCentered("---------------------------------------");
+                        objPrint.printCentered("        The game has started!\n");
+                        objPrint.printCentered("        ---------------------------------------");
                         System.out.println();
                         scan.nextLine();
                         isEnabled = false;
                     } else if (choice == 2) {
                         objClear.clearScreen();
-                        System.out.println("You have exited the game!");
+                        objPrint.printCentered("        You have exited the game!");
                         return;
                     } else {
                         objClear.clearScreen();
-                        objPrint.printCentered("---------------------------------------");
-                        objPrint.printCentered("Please enter a valid choice!");
+                        objPrint.printCentered("        ---------------------------------------");
+                        objPrint.printCentered("        Please enter a valid choice!");
                         objPrint.printCentered("");
                     }
                 } catch (Exception e) {
                     objClear.clearScreen();
-                    objPrint.printCentered("---------------------------------------");
-                    objPrint.printCentered("Invalid input! Please enter a number.");
+                    objPrint.printCentered("        ---------------------------------------");
+                    objPrint.printCentered("        Invalid input! Please enter a number.");
                     objPrint.printCentered("");
                     scan.nextLine();
                 }
@@ -119,14 +119,14 @@ public class MainGame {
 
             while (isEnabled) {
                 try {
-                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    objPrint.printCentered("        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                     objPrint.printCentered("");
                     objPrint.printCentered("        Choose your character: ");
                     objPrint.printCentered("        1. Musashi Miyamoto    ");
                     objPrint.printCentered("        2. Thorfinn            ");
                     objPrint.printCentered("        3. Gilgamesh           ");
                     objPrint.printCentered("");
-                    objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                    objPrint.printCentered("        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
                     System.out.print("\t\t\t\t\t\t\tEnter your choice!: ");
                     choice = scan.nextInt();
@@ -182,10 +182,18 @@ public class MainGame {
 
             
             while(true){ 
+                System.out.println("\n\n\n\n");
+                System.out.println("\033[31m" + 
+            "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
+            "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
+            "\t\t\t\t\t██║  ██║█████╗  █████╗  █████╗  ███████║   ██║   █████╗  ██║  ██║\n" +
+            "\t\t\t\t\t██║  ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\n" +
+            "\t\t\t\t\t██████╔╝███████╗██║     ███████╗██║  ██║   ██║   ███████╗██████╔╝\n" +
+            "\t\t\t\t\t╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\033[0m \n\n\n\n\n\n\n\n\n");
+                System.out.println("\t\t\t\t\t1. Retry");
+                System.out.println("\t\t\t\t\t2. Exit");
+                System.out.print("\t\t\t\t\tEnter your choice: ");
                 try{
-                    System.out.println("\t\t\t\t\t1. Retry");
-                    System.out.println("\t\t\t\t\t2. Exit");
-                    System.out.print("\t\t\t\t\tEnter your choice: ");
                     retryChoice = scan.nextInt();
 
                     if (retryChoice == 1) {
@@ -223,10 +231,18 @@ public class MainGame {
             audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\YOU DIED (HD).wav");
             
             while(true){ 
+                System.out.println("\n\n\n\n");
+                System.out.println("\033[31m" + 
+            "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
+            "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
+            "\t\t\t\t\t██║  ██║█████╗  █████╗  █████╗  ███████║   ██║   █████╗  ██║  ██║\n" +
+            "\t\t\t\t\t██║  ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\n" +
+            "\t\t\t\t\t██████╔╝███████╗██║     ███████╗██║  ██║   ██║   ███████╗██████╔╝\n" +
+            "\t\t\t\t\t╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\033[0m \n\n\n\n\n\n\n\n\n");
+                System.out.println("\t\t\t\t\t1. Retry");
+                System.out.println("\t\t\t\t\t2. Exit");
+                System.out.print("\t\t\t\t\tEnter your choice: ");
                 try{
-                    System.out.println("\t\t\t\t\t1. Retry");
-                    System.out.println("\t\t\t\t\t2. Exit");
-                    System.out.print("\t\t\t\t\tEnter your choice: ");
                     retryChoice = scan.nextInt();
 
                     if (retryChoice == 1) {
@@ -264,10 +280,18 @@ public class MainGame {
             audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\YOU DIED (HD).wav");
             
             while(true){ 
+                System.out.println("\n\n\n\n");
+                System.out.println("\033[31m" + 
+            "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
+            "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
+            "\t\t\t\t\t██║  ██║█████╗  █████╗  █████╗  ███████║   ██║   █████╗  ██║  ██║\n" +
+            "\t\t\t\t\t██║  ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\n" +
+            "\t\t\t\t\t██████╔╝███████╗██║     ███████╗██║  ██║   ██║   ███████╗██████╔╝\n" +
+            "\t\t\t\t\t╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\033[0m \n\n\n\n\n\n\n\n\n");
+                System.out.println("\t\t\t\t\t1. Retry");
+                System.out.println("\t\t\t\t\t2. Exit");
+                System.out.print("\t\t\t\t\tEnter your choice: ");
                 try{
-                    System.out.println("\t\t\t\t\t1. Retry");
-                    System.out.println("\t\t\t\t\t2. Exit");
-                    System.out.print("\t\t\t\t\tEnter your choice: ");
                     retryChoice = scan.nextInt();
 
                     if (retryChoice == 1) {
@@ -306,10 +330,17 @@ public class MainGame {
 
             
             while(true){ 
+        System.out.println("\t\t\t\t\t████████╗██╗  ██╗███████╗    ███████╗███╗   ██╗██████╗ ");
+        System.out.println("\t\t\t\t\t╚══██╔══╝██║  ██║██╔════╝    ██╔════╝████╗  ██║██╔══██╗");
+        System.out.println("\t\t\t\t\t   ██║   ███████║█████╗      █████╗  ██╔██╗ ██║██║  ██║");
+        System.out.println("\t\t\t\t\t   ██║   ██╔══██║██╔══╝      ██╔══╝  ██║╚██╗██║██║  ██║");
+        System.out.println("\t\t\t\t\t   ██║   ██║  ██║███████╗    ███████╗██║ ╚████║██████╔╝");
+        System.out.println("\t\t\t\t\t   ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚══════╝╚═╝  ╚═══╝╚═════╝ ");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                System.out.println("\t\t\t\t\t1. Retry");
+                System.out.println("\t\t\t\t\t2. Exit");
+                System.out.print("\t\t\t\t\tEnter your choice: ");
                 try{
-                    System.out.println("\t\t\t\t\t1. Retry");
-                    System.out.println("\t\t\t\t\t2. Exit");
-                    System.out.print("\t\t\t\t\tEnter your choice: ");
                     retryChoice = scan.nextInt();
 
                     if (retryChoice == 1) {
@@ -322,7 +353,8 @@ public class MainGame {
                         return; // Exit the game
                     } else{
                         objClear.clearScreen();
-                        System.out.println("\t\t\t\tInvalid Choice. Try Again!");
+                        System.out.println("\t\t\t\t\tInvalid Choice. Try Again!");
+                        System.out.println("");
                     }
                 }catch(Exception e){
                     objClear.clearScreen();

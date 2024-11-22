@@ -51,7 +51,7 @@ public class Musashi extends Player {
     @Override
     public int oneHitDelete(){
         objClear.clearScreen();
-        System.out.println("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
+        objPrint.printCentered("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
     }
@@ -78,31 +78,39 @@ public class Musashi extends Player {
         Scanner scanner = new Scanner(System.in);
         
         objClear.clearScreen();
-        System.out.println("-=-=-=-=-=-=-=-=-=-BACKSTORY-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nOnce a proud warrior, Musashi fell into darkness when he became a puppet for the demonic realm. \n"
-                + "Bound by a curse, every kill of a demon brings him closer to reclaiming his lost humanity,"
-                + "\n\n press 'Enter to continue");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-BACKSTORY-=-=-=-=-=-=-=-=-=-");
+        System.out.println("");
+        objPrint.printCentered("Once a proud warrior, Musashi fell into darkness when he became a puppet for the demonic realm.");
+        objPrint.printCentered("Bound by a curse, every kill of a demon brings him closer to reclaiming his lost humanity,");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nwith each demon slain restoring a part of his fragmented body. He fights, not for glory, \n"
-                + "but for the hope of breaking the curse that chains him to the underworld."
-                + "\n\n press 'Enter to continue");
+        objPrint.printCentered("--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("");
+        objPrint.printCentered("with each demon slain restoring a part of his fragmented body. He fights, not for glory,");
+        objPrint.printCentered("but for the hope of breaking the curse that chains him to the underworld.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nBut as his body returns, so too does the madness lurking deep within,\n"
-                + "forcing him to walk the line between redemption and damnation."
-                + "\n\n press 'Enter' to continue");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("");
+        objPrint.printCentered("But as his body returns, so too does the madness lurking deep within,");
+        objPrint.printCentered("forcing him to walk the line between redemption and damnation.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
         
         objClear.clearScreen();
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nMusashi is in a journey to end this ugly curse, by killing all the demons that interferes on his path\n"
-                + "restoring his lost humanity..."
-                + "\n\n press 'Enter' to continue");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("");
+        objPrint.printCentered("Musashi is in a journey to end this ugly curse, by killing all the demons that interferes on his path");
+        objPrint.printCentered("restoring his lost humanity...");
+        System.out.println("");
+        objPrint.printCentered("Print 'Enter' to Cotinue");
         scanner.nextLine();
     }
 
@@ -110,21 +118,27 @@ public class Musashi extends Player {
         Scanner scanner = new Scanner(System.in);
 
         objClear.clearScreen();
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=MUSASHI ENDING-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nFinally, Musashi succeeded defeating all the demons, resulting in regaining his humanity."
-                + "\n\n press 'Enter' to continue");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-MUSASHI ENDING-=-=-=-=-=-=-=-=-=-");
+        System.out.println("");
+        objPrint.printCentered("Finally, Musashi succeeded defeating all the demons, resulting in regaining his humanity.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
 
         objClear.clearScreen();
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nHe lived in peace, no longer chained by the curse he has in the past."
-                + "\n\n press 'Enter' to continue");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("");
+        objPrint.printCentered("He lived in peace, no longer chained by the curse he has in the past.");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to Continue");
         scanner.nextLine();
 
         objClear.clearScreen();
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=MUSASHI ENDING-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\nAs he returned to his hometown, he lived happily ever after..."
-                + "\n\n press 'Enter' to end");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-MUSASHI ENDING-=-=-=-=-=-=-=-=-=-");
+        System.out.println("");
+        objPrint.printCentered("As he returned to his hometown, he lived happily ever after...");
+        System.out.println("");
+        objPrint.printCentered("Press 'Enter' to End");
         scanner.nextLine();
     }
     

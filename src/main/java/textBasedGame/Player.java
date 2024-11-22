@@ -5,7 +5,8 @@ package textBasedGame;
  * @author User
  */
 public abstract class Player {
-    
+    CenterAlign objPrint = new CenterAlign();
+
     private String Name;
     private int Health;
     private int Mana;
@@ -119,9 +120,9 @@ public abstract class Player {
         MaxMana += 25;
         MaxExp += 25;
         
-        System.out.println("\u001B[32m\n\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("\tYou leveled up to " + ExpLevel + "!");
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\u001B[0m");
+        objPrint.printCentered("\u001B[32m-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        objPrint.printCentered("\tYou leveled up to " + ExpLevel + "!");
+        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\u001B[0m");
 
     }
 
