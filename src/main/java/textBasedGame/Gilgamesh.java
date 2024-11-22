@@ -13,6 +13,9 @@ public class Gilgamesh extends Player{
     private String skillOneName = "Stellar Rift";
     private String skillTwoName = "Astral Surge";
     private String skillThreeName = "Celestial Binding";
+
+    CenterAlign objPrint = new CenterAlign();
+    ClearScreen objClear = new ClearScreen();
     
     public Gilgamesh(String Name, int Health, int Mana, int Exp){
         super(Name, Health, Mana, Exp);
@@ -47,7 +50,7 @@ public class Gilgamesh extends Player{
     @Override
     public int oneHitDelete(){
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("Gilgamesh uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
@@ -72,21 +75,21 @@ public class Gilgamesh extends Player{
     public void intro(){
          Scanner scanner = new Scanner(System.in);
          
-         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+         objClear.clearScreen();
          System.out.println("\n-==-=-=-=-=-=-=-=-=-=-=-=-=-BACKSTORY-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=\n");
         System.out.println("Born under mysterious circumstances, Gilgamesh was marked by the stars as the chosen one, \n"
                 + "destined to wield ancient magic capable of shaping the world itself.\n"
                 + "\npress 'Enter' to continue....");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("As a powerful wizard, his abilities have grown beyond what even the greatest mages can comprehend\n"
                 + "But Gilgamesh bears the weight of his lineage, tasked with stopping the rise of the demonic overlords. \n"
                 + "\npress 'Enter' to continue....");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println(". His quest is not just to protect the world, \n"
                 + "but to uncover the hidden truth about his own past and the dark secret behind his birth.\n"
@@ -101,7 +104,7 @@ public class Gilgamesh extends Player{
     public void ending(){
          Scanner scanner = new Scanner(System.in);
 
-         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+         objClear.clearScreen();
           System.out.println("\n-==-=-=-=-=-=-=-=GILGAMESH EPILOGUE-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=\n");
         System.out.println(". After annihilating the demonic forces and standing as the savior of the world,\n"
                 + " Gilgamesh has been gifted by Jormangandr, a mysterious ancient book given by the god of wisdom as his reward for saving the world. \n"
@@ -110,14 +113,14 @@ public class Gilgamesh extends Player{
      
      
      
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
      System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("The cover of the book is made of an indestructible \n"
                 + "material, marked with celestial symbols and sigils of both light and shadow, indicating its power. \n"
                 + "\npress 'Enter' to continue....");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
     System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("This is the Codex of the Primordial Truth, said to hold the secrets of creation itself.\n"
                 + " As he opens the book, it reveals the long-forgotten history of the world, the nature of his birth,\n"

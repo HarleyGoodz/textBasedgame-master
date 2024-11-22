@@ -13,6 +13,9 @@ public class Tiamat extends Enemy{
     private int Health;
     private String Name;
 
+    CenterAlign objPrint = new CenterAlign();
+    ClearScreen objClear = new ClearScreen();
+
     private AudioManager audioManager;
 
     public Tiamat(AudioManager audioManager) {
@@ -74,7 +77,7 @@ public class Tiamat extends Enemy{
     @Override
     public String toString(){
         
-        int maxHealth = 1000; 
+        int maxHealth = 900; 
         int barLength = 20; 
         int filledLength = (int) ((double) Health / maxHealth * barLength);
     
@@ -91,7 +94,7 @@ public class Tiamat extends Enemy{
                 healthBar.append(" "); 
             }
         }
-        healthBar.append("]");
+        healthBar.append("]\n\n\n\n\n\n");
     
         
         return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
@@ -99,7 +102,7 @@ public class Tiamat extends Enemy{
 
     public void Tiamat_Backstory(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("\n-=-=-=-=-=-=-=-=-=-=-BACKSTORY-=-=-=-=-=-=-=-=-=-=-\n");
         System.out.println("Tiamat, a primordial being of chaos and creation, born from the very essence of the cosmos.\n"+
         "She existed in the abyss, a vast sea of raw,\n"+
@@ -107,7 +110,7 @@ public class Tiamat extends Enemy{
          System.out.println("Press 'Enter' to continue");
          scanner.nextLine();
 
-         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+         objClear.clearScreen();
          System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
         System.out.println("Tiamat's purpose was to give birth to life, but her creations were monstrous, \n"+
         "chaotic beings born from her wrath and untethered energy.\n");
@@ -115,7 +118,7 @@ public class Tiamat extends Enemy{
          scanner.nextLine();
 
 
-         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+         objClear.clearScreen();
          System.out.println("-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-\n");
         System.out.println("Your mission is to annihilate this being, to stop her hideous creations in conquering your world!\n");
          System.out.println("Press 'Enter' to FIGHT");

@@ -13,6 +13,9 @@ public class Thorfinn extends Player {
     private String skillOneName = "Whirldwind Cleave";
     private String skillTwoName = "Seismic Strike";
     private String skillThreeName = "Blade Tempest";
+
+    CenterAlign objPrint = new CenterAlign();
+    ClearScreen objClear = new ClearScreen();
     
     public Thorfinn(String Name, int Health, int Mana, int Exp){
         super(Name, Health, Mana, Exp);
@@ -46,7 +49,7 @@ public class Thorfinn extends Player {
     @Override
     public int oneHitDelete(){
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("Thorfinn uses One Hit Delete! Deals ∞ damage.");
         
         return 1000;
@@ -71,7 +74,7 @@ public class Thorfinn extends Player {
     public void intro(){
             Scanner scanner = new Scanner(System.in);
         
-            System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            objClear.clearScreen();
         System.out.println("\n-=-=-=-=-=-=-=-=-=BACKSTORY-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("Thorn was once a man of peace, a master of the sword who valued family above all else.\n"
                 + "His world shattered when his family was attacked by the monstrious creations of Tiamat, \n "
@@ -79,14 +82,14 @@ public class Thorfinn extends Player {
         scanner.nextLine();
   
        
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("Consumed by rage, Thorn has spent years honing his skills, \n"
                 + "turning himself into a walking weapon of vengeance. \n"
                 + "\npress 'Enter' to continue....");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("His only goal is to kill all the monsters who took everything from him,"
                 + "and ending those spread evil.\n"
@@ -103,7 +106,7 @@ public class Thorfinn extends Player {
         
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-THORFINN EPILOGUE-=-=-=-=-=-=-=-=-=\n");
         System.out.println("As Thorfinn stands over his victory in avenging his family, \n"
                 + "the moment he had envisioned for years finally arrives.\n"
@@ -112,34 +115,34 @@ public class Thorfinn extends Player {
         scanner.nextLine();
       
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("The rage that fueled him for so long begins to wane, leaving him with a strange emptiness.\n"
                 + "\npress 'Enter' to continue....");
         scanner.nextLine();
       
        
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("standing victorious, he realizes the cost. He had lost more than just his family. He had lost himself.\n"
                 + "\npress 'Enter' to continue");
         scanner.nextLine();
     
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("With a grimace, Thorn drives his sword into the earth, no longer needing it. \n"
                 + " Thorfinn says, his voice low but steady. this isn't the end of my journey.\n"
                 + "\npress 'Enter' to continue");
         scanner.nextLine();
   
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("As Thorn walks away from the forest, the wind carries the scent of sweat and bruises,\n"
                 + " but something deeper stirs within him. He knows now that his journey is not over.\n"
                 + "\npress 'Enter' to continue");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-==-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=\n");
         System.out.println("He looks to the horizon, where the sun is just beginning to rise. A new dawn, a new chapter.\n"
                 + " Thorn is no longer bound by the past. He is no longer a slave to rage. His destiny,\n"

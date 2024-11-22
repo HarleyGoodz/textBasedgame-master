@@ -18,6 +18,7 @@ public class Inventory {
     private int BossDropOneCount = 0;
     private int BossDropTwoCount = 0;
     private int gold;
+    private double multiplier;
     
     public void setGold(int gold){
         this.gold += gold;
@@ -78,13 +79,17 @@ public class Inventory {
     }
     
     public int BossDropTwoEffect(int damage){
-        double multiplier = (double) (Math.random() * (2.0 - 1.8 + 1)) + 1.8;
+        multiplier = (double) (Math.random() * (2.0 - 1.8 + 1)) + 1.8;
         
         double MultipliedDamage = damage * multiplier;
         
         return (int) MultipliedDamage;
     }
     
+    public double getMultiplier(){
+        return multiplier;
+    }
+
     public int useItemOne(){
         ItemOneCount--;
         return 50; 

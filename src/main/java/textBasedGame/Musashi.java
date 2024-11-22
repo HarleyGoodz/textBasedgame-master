@@ -13,6 +13,9 @@ public class Musashi extends Player {
     private String skillOneName = "Soul Pierce";
     private String skillTwoName = "Lifeblood Rend";
     private String skillThreeName = "Demon Fang Strike";
+
+    ClearScreen objClear = new ClearScreen();
+    CenterAlign objPrint = new CenterAlign();
             
     
     public Musashi(String Name, int Health, int Mana, int Exp){
@@ -47,7 +50,7 @@ public class Musashi extends Player {
     
     @Override
     public int oneHitDelete(){
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
@@ -74,28 +77,28 @@ public class Musashi extends Player {
         
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-BACKSTORY-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nOnce a proud warrior, Musashi fell into darkness when he became a puppet for the demonic realm. \n"
                 + "Bound by a curse, every kill of a demon brings him closer to reclaiming his lost humanity,"
                 + "\n\n press 'Enter to continue");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nwith each demon slain restoring a part of his fragmented body. He fights, not for glory, \n"
                 + "but for the hope of breaking the curse that chains him to the underworld."
                 + "\n\n press 'Enter to continue");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nBut as his body returns, so too does the madness lurking deep within,\n"
                 + "forcing him to walk the line between redemption and damnation."
                 + "\n\n press 'Enter' to continue");
         scanner.nextLine();
         
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nMusashi is in a journey to end this ugly curse, by killing all the demons that interferes on his path\n"
                 + "restoring his lost humanity..."
@@ -106,19 +109,19 @@ public class Musashi extends Player {
     public void ending(){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=MUSASHI ENDING-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nFinally, Musashi succeeded defeating all the demons, resulting in regaining his humanity."
                 + "\n\n press 'Enter' to continue");
         scanner.nextLine();
 
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nHe lived in peace, no longer chained by the curse he has in the past."
                 + "\n\n press 'Enter' to continue");
         scanner.nextLine();
 
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        objClear.clearScreen();
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=MUSASHI ENDING-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.println("\nAs he returned to his hometown, he lived happily ever after..."
                 + "\n\n press 'Enter' to end");

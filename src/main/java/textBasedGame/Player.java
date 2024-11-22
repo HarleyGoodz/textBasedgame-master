@@ -68,6 +68,8 @@ public abstract class Player {
     
     public void setHeal(int heal){
         Health += heal;
+
+        System.out.println("Lifesteal: " + heal);
         
         if(Health > MaxHealth){
             Health = MaxHealth;
@@ -123,6 +125,14 @@ public abstract class Player {
 
     }
 
+    public int getMaxHealth(){
+        return MaxHealth;
+    }
+
+    public int getMaxMana(){
+        return MaxMana;
+    }
+
     
 
     
@@ -138,16 +148,18 @@ public abstract class Player {
     
     
     private String generateBar(int currentValue, int maxValue, int barLength, String color) {
+        // Calculate the filled portion of the bar
         int filledLength = (int) ((double) currentValue / maxValue * barLength);
-        StringBuilder bar = new StringBuilder();
-
+        StringBuilder bar = new StringBuilder("[");
+    
+        // ANSI color codes for the bar
         String colorCode;
-        switch (color) {
+        switch (color.toUpperCase()) {
             case "RED":
-                colorCode = "\u001B[31m";
+                colorCode = "\u001B[31m"; 
                 break;
             case "BLUE":
-                colorCode = "\u001B[34m";
+                colorCode = "\u001B[34m"; 
                 break;
             case "YELLOW":
                 colorCode = "\u001B[33m"; 
@@ -155,14 +167,18 @@ public abstract class Player {
             default:
                 colorCode = "\u001B[0m"; 
         }
-
+    
+        
         for (int i = 0; i < filledLength; i++) {
-            bar.append(colorCode).append("██").append("\u001B[0m");
+            bar.append(colorCode).append("■").append("\u001B[0m"); 
         }
+    
+        
         for (int i = filledLength; i < barLength; i++) {
-            bar.append("  ");
+            bar.append(" "); 
         }
-
+    
+        bar.append("]");
         return bar.toString();
     }
 }

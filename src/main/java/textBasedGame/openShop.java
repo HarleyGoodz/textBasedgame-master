@@ -10,15 +10,22 @@ package textBasedGame;
  */
 import java.util.Scanner;
 public class openShop {
-    Inventory objIn;
+
+    private Inventory objIn;
     
-    public openShop(Inventory objIn){
-        this.objIn = objIn;
+    
+        public openShop(Inventory objIn){
+            this.objIn = objIn;
     }
     int buyCount = 0;
+
+    CenterAlign objPrint = new CenterAlign();
+    ClearScreen objClear = new ClearScreen();
     
    
     public void Shop(Scanner scanner) {
+
+        
         System.out.println("-------------------------------------------");
         System.out.println("After a fierce battle, you are now taking a break in the shop.");
         System.out.println("-------------------------------------------");
@@ -37,7 +44,7 @@ public class openShop {
 
                 if (itemChoice == 1 && objIn.getGold() >= 100) {
                     objIn.useGold(100);
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    objClear.clearScreen();
                     System.out.println("-------------------------------------------");
                     buyCount++;
                     System.out.println("\t\tBUY COUNT: "+buyCount+"");
@@ -60,7 +67,7 @@ public class openShop {
                 } else if (itemChoice == 2 && objIn.getGold() >= 100) {
                     objIn.useGold(100);
                     
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    objClear.clearScreen();
                     System.out.println("-------------------------------------------");
                     buyCount++;
                     System.out.println("\t\tBUY COUNT: "+buyCount+"");
@@ -80,7 +87,7 @@ public class openShop {
                     System.out.println("        ==========================\n\n");
 
                 } else if (itemChoice == 0) {
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    objClear.clearScreen();
                     System.out.println("-------------------------------------------");
                     
                     System.out.println("\t\tBUY COUNT: "+buyCount+"");
@@ -92,11 +99,12 @@ public class openShop {
                     System.out.println("2. Mana Potion (Restores 50 Mana) - 100 Gold");
                     System.out.println();
                     
-                    System.out.println("\u001B[31mYou have exited the shop.\n\n\u001B[0m");
+                    objClear.clearScreen();
+                    System.out.println("\u001B[31m\tYou have exited the shop.\n\n\u001B[0m");
                     buyCount = 0;
                     break;  
                 } else {
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    objClear.clearScreen();
                     System.out.println("-------------------------------------------");
                     
                     System.out.println("\t\tBUY COUNT: "+buyCount+"");
@@ -116,7 +124,7 @@ public class openShop {
                    
                 }
             } catch (Exception e) {
-                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                objClear.clearScreen();
                     System.out.println("-------------------------------------------");
                     
                     System.out.println("\t\tBUY COUNT: "+buyCount+"");

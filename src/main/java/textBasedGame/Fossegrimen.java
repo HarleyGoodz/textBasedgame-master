@@ -71,7 +71,7 @@ public class Fossegrimen extends Minion {
                 healthBar.append(" "); 
             }
         }
-        healthBar.append("]");
+        healthBar.append("]\n\n\n\n\n\n");
     
         
         return Name + "'s Health: " + Health + "/" + maxHealth + " " + healthBar.toString();
