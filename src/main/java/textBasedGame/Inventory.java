@@ -83,7 +83,7 @@ public class Inventory {
         
         double MultipliedDamage = damage * multiplier;
         
-        return (int) MultipliedDamage;
+        return (int) Math.ceil(MultipliedDamage);
     }
     
     public double getMultiplier(){

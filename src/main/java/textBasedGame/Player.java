@@ -69,8 +69,6 @@ public abstract class Player {
     
     public void setHeal(int heal){
         Health += heal;
-
-        System.out.println("Lifesteal: " + heal);
         
         if(Health > MaxHealth){
             Health = MaxHealth;
@@ -120,9 +118,11 @@ public abstract class Player {
         MaxMana += 25;
         MaxExp += 25;
         
-        objPrint.printCentered("\u001B[32m-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        objPrint.printCentered("\tYou leveled up to " + ExpLevel + "!");
-        objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\u001B[0m");
+        System.out.println();
+        objPrint.printCentered("\u001B[32m -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        objPrint.printCentered("You leveled up to " + ExpLevel + "!");
+        objPrint.printCentered(" -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\u001B[0m");
+        System.out.println();
 
     }
 

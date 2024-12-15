@@ -16,7 +16,7 @@ public class Urmahlullu extends Minion{
     public Urmahlullu(String Name, int MaxHealth){
         this.MaxHealth = MaxHealth;
         this.Name = Name;
-        this.Health = Health;
+        this.Health = MaxHealth;
     }
     
     @Override

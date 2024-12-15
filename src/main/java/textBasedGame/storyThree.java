@@ -33,7 +33,7 @@ public class storyThree {
     Scanner scanner = new Scanner(System.in);
     openShop objShop = new openShop(objIn);
     audioManager.stopAudio();
-    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Chaos Witch Quelaag.wav");
+    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Chaos Witch Quelaag.wav");
     
     objPrint.printCentered("---------THE FINAL CHAPTER---------");
     System.out.println("");
@@ -138,6 +138,7 @@ public class storyThree {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillTwoName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
 
                             objAnzu.takeDamage(multiplied);
@@ -166,6 +167,7 @@ public class storyThree {
                             damage = character.skillThree(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillThreeName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
                             objAnzu.takeDamage(multiplied);
                         }
@@ -195,7 +197,8 @@ public class storyThree {
                     case 5:
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == character.getMaxHealth()){
-                                System.out.println("\nYou're still full in Health!\n");
+                                objClear.clearScreen();
+                                System.out.println("\033[31m\nYou're still full in Health!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -211,14 +214,14 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Health Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Health Potions!\n\033[0m");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == character.getMaxMana()){
                                 objClear.clearScreen();
-                                System.out.println("\nYou're still full in Mana!\n");
+                                System.out.println("\033[31m\nYou're still full in Mana!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -234,12 +237,12 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Mana Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Mana Potions!\n\033[0m");
                             continue;
                         }
                     default:
                     objClear.clearScreen();
-                        System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
+                    System.out.println("\033[31m\nNot enough mana or invalid choice! Choose again.\n\033[0m");
                         continue;
                 }
 
@@ -255,7 +258,7 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println(character.getName() + " has fallen. " + objAnzu.getName() + " prevails.");
+                    objPrint.printCentered("\033[31m\t\t" + character.getName() + " has fallen. " + objAnzu.getName() + " prevails.\033[0m");
                     TurnCounter = 0;
                     character.setDefeated(true);
                     break;
@@ -298,7 +301,7 @@ public class storyThree {
                 }
             } catch (Exception e) {
                 objClear.clearScreen();
-                System.out.println("Invalid input! Please enter a valid number.");
+                System.out.println("\033[31mInvalid input! Please enter a valid number.\033[0m");
                 scanner.nextLine();  // Clear the buffer
             }
         }
@@ -375,6 +378,7 @@ public class storyThree {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillTwoName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
 
                             objUrma.takeDamage(multiplied);
@@ -403,6 +407,7 @@ public class storyThree {
                             damage = character.skillThree(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillThreeName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
                             objUrma.takeDamage(multiplied);
                         }
@@ -433,7 +438,7 @@ public class storyThree {
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == character.getMaxHealth()){
                                 objClear.clearScreen();
-                                System.out.println("\nYou're still full in Health!\n");
+                                System.out.println("\033[31m\nYou're still full in Health!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -449,14 +454,14 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Health Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Health Potions!\n\033[0m");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == character.getMaxMana()){
                                 objClear.clearScreen();
-                                System.out.println("\nYou're still full in Mana!\n");
+                                System.out.println("\033[31m\nYou're still full in Mana!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -472,12 +477,12 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Mana Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Mana Potions!\n\033[0m");
                             continue;
                         }
                     default:
                     objClear.clearScreen();
-                        System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
+                    System.out.println("\033[31m\nNot enough mana or invalid choice! Choose again.\n\033[0m");
                         continue;
                 }
 
@@ -493,7 +498,7 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println(character.getName() + " has fallen. " + objUrma.getName() + " prevails.");
+                    objPrint.printCentered("\033[31m\t\t" + character.getName() + " has fallen. " + objUrma.getName() + " prevails.\033[0m");
                     TurnCounter = 0;
                     character.setDefeated(true);
                     break;
@@ -514,7 +519,7 @@ public class storyThree {
                 }
             } catch (Exception e) {
                 objClear.clearScreen();
-                System.out.println("Invalid input! Please enter a valid number.");
+                System.out.println("\033[31mInvalid input! Please enter a valid number.\033[0m");
                 scanner.nextLine();  // Clear the buffer
             }
         }
@@ -589,6 +594,7 @@ public class storyThree {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillTwoName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
 
                             objHum.takeDamage(multiplied);
@@ -617,6 +623,7 @@ public class storyThree {
                             damage = character.skillThree(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillThreeName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
                             objHum.takeDamage(multiplied);
                         }
@@ -647,7 +654,7 @@ public class storyThree {
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == character.getMaxHealth()){
                                 objClear.clearScreen();
-                                System.out.println("You're still full in Health! ");
+                                System.out.println("\033[31m\nYou're still full in Health!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -663,14 +670,14 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Health Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Health Potions!\n\033[0m");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == character.getMaxMana()){
                                 objClear.clearScreen();
-                                System.out.println("\nYou're still full in Mana!\n");
+                                System.out.println("\033[31m\nYou're still full in Mana!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -686,12 +693,13 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Mana Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Mana Potions!\n\033[0m");
                             continue;
                         }
                     default:
                     objClear.clearScreen();
-                        System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
+                    System.out.println("\033[31m\nNot enough mana or invalid choice! Choose again.\n\033[0m");
+
                         continue;
                 }
 
@@ -707,7 +715,7 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     objClear.clearScreen();
-                    System.out.println(character.getName() + " has fallen. " + objHum.getName() + " prevails.");
+                    objPrint.printCentered("\033[31m\t\t" + character.getName() + " has fallen. " + objHum.getName() + " prevails.\033[0m");
                     TurnCounter = 0;
                     character.setDefeated(true);
                     break;
@@ -725,7 +733,7 @@ public class storyThree {
                     TurnCounter = 0;
 
                     audioManager.stopAudio();
-                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Centipede Demon.wav");
+                    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Centipede Demon.wav");
                     objPrint.printCentered("----------------------------------------------");
                     System.out.println("");
                     objPrint.printCentered("After defeating those who attempted to trample your path, you managed to prevail on your adventure,");
@@ -748,7 +756,8 @@ public class storyThree {
                 }
             } catch (Exception e) {
                 objClear.clearScreen();
-                System.out.println("Invalid input! Please enter a valid number.");
+                System.out.println("\033[31mInvalid input! Please enter a valid number.\033[0m");
+
                 scanner.nextLine();  // Clear the buffer
             }
         }
@@ -825,6 +834,7 @@ public class storyThree {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillTwoName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
 
                             objTia.takeDamage(multiplied);
@@ -853,6 +863,7 @@ public class storyThree {
                             damage = character.skillThree(); // Random damage between 35 and 45
                             multiplied = objIn.BossDropTwoEffect(damage);
                             character.setHeal(damage / 2);
+                            System.out.println("Lifesteal: " + damage / 2);
                             System.out.println(character.getName() + " uses " + character.skillThreeName() + "! Deals " + damage + " X " + df.format(objIn.getMultiplier()) + " = " + multiplied + " Multiplied damage.");
                             objTia.takeDamage(multiplied);
                         }
@@ -880,7 +891,7 @@ public class storyThree {
                         if(objIn.getItemOneCount() > 0){
                             if(character.getHealth() == character.getMaxHealth()){
                                 objClear.clearScreen();
-                                System.out.println("\nYou're still full in Health!\n");
+                                System.out.println("\033[31m\nYou're still full in Health!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -897,14 +908,14 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Health Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Health Potions!\n\033[0m");
                             continue;
                         }
                     case 6:
                         if(objIn.getItemTwoCount() > 0){
                             if(character.getMana() == character.getMaxMana()){
                                 objClear.clearScreen();
-                                System.out.println("\nYou're still full in Mana!\n");
+                                System.out.println("\033[31m\nYou're still full in Mana!\n\033[0m");
                                 continue;
                             }
                             else{
@@ -920,12 +931,13 @@ public class storyThree {
                         }
                         else{
                             objClear.clearScreen();
-                            System.out.println("\nYou're out of Mana Potions!\n");
+                            System.out.println("\033[31m\nYou're out of Mana Potions!\n\033[0m");
                             continue;
                         }
                     default:
                     objClear.clearScreen();
-                        System.out.println("\nNot enough mana or invalid choice! Choose again.\n");
+                    System.out.println("\033[31m\nNot enough mana or invalid choice! Choose again.\n\033[0m");
+
                         continue;
                 }
 
@@ -971,7 +983,7 @@ public class storyThree {
                     objPrint.printCentered(character.getName() + " have received " + Exp + " XP!");
                     character.addExp(Exp);
                     audioManager.stopAudio();
-                    audioManager.playAudio("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Character Config [bonus].wav");
+                    audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Dark Souls_ Chiptune Demixes - Character Config [bonus].wav");
 
                     objPrint.printCentered("-=-=-=-=-=-=-=-=-=-=-TIAMAT HAS BEEN DEFEATED!-=-=-=-=-=-=-=-=-=-=-");
                     System.out.println("");
@@ -1066,7 +1078,7 @@ public class storyThree {
                 }
             } catch (Exception e) {
                 objClear.clearScreen();
-                System.out.println("Invalid input! Please enter a valid number.");
+                System.out.println("\033[31mInvalid input! Please enter a valid number.\033[0m");
                 scanner.nextLine();  // Clear the buffer
             }
         }

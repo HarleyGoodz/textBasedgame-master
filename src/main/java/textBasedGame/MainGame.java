@@ -49,7 +49,7 @@ public class MainGame {
         System.out.println("\n\n\n");
 
         
-        File file = new File("C:\\Users\\Silent Voice\\Documents\\GameProj\\textBasedgame-master\\OST\\Starting.wav");
+        File file = new File("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\Starting.wav");
         objClear.clearScreen();
         System.out.println("\n\n\n\n\n\n");
         try {
@@ -84,7 +84,7 @@ public class MainGame {
 
                     System.out.println("\n\n\n");
                     System.out.println("\t\t\t\t\t\t\t1. Start Game");
-                    System.out.println("\t\t\t\t\t\t\t2. exit");
+                    System.out.println("\t\t\t\t\t\t\t2. Exit");
                     System.out.print("\t\t\t\t\t\t\tEnter your choice!: ");
                     choice = scan.nextInt();
 
@@ -101,14 +101,16 @@ public class MainGame {
                         return;
                     } else {
                         objClear.clearScreen();
-                        objPrint.printCentered("        ---------------------------------------");
-                        objPrint.printCentered("        Please enter a valid choice!");
+                        
+                        objPrint.printCentered("\033[31m\t\tPlease enter a valid choice!\033[0m");
+
                         objPrint.printCentered("");
                     }
                 } catch (Exception e) {
                     objClear.clearScreen();
-                    objPrint.printCentered("        ---------------------------------------");
-                    objPrint.printCentered("        Invalid input! Please enter a number.");
+                    
+                    objPrint.printCentered("\033[31m\t\tInvalid input! Please enter a number.\033[0m");
+
                     objPrint.printCentered("");
                     scan.nextLine();
                 }
@@ -153,14 +155,16 @@ public class MainGame {
                             break;
                         default:
                         objClear.clearScreen();
-                        objPrint.printCentered("------------------------------------------");
-                        objPrint.printCentered("Invalid choice.");
+                        objPrint.printCentered("\033[31m\t\t------------------------------------------\033[0m");
+                        objPrint.printCentered("\033[31\t\tmInvalid choice.\033[0m");
+
                         objPrint.printCentered("");
                     }
                 } catch (Exception e) {
                     objClear.clearScreen();
-                    objPrint.printCentered("------------------------------------------");
-                    objPrint.printCentered("Invalid input! Please enter a number.");
+                    objPrint.printCentered("\033[31m\t\t------------------------------------------\033[0m");
+                    objPrint.printCentered("\033[31m\t\tInvalid input! Please enter a number.\033[0m");
+
                     objPrint.printCentered("");
                     scan.nextLine();
                 }
@@ -170,19 +174,12 @@ public class MainGame {
             objWallOne.wallOne(playerCharacter, objIn);
 
             if (playerCharacter.getDefeated()) {
-                System.out.println("\n\n\n\n");
-                System.out.println("\033[31m" + 
-            "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
-            "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
-            "\t\t\t\t\t██║  ██║█████╗  █████╗  █████╗  ███████║   ██║   █████╗  ██║  ██║\n" +
-            "\t\t\t\t\t██║  ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\n" +
-            "\t\t\t\t\t██████╔╝███████╗██║     ███████╗██║  ██║   ██║   ███████╗██████╔╝\n" +
-            "\t\t\t\t\t╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\033[0m \n\n\n\n\n\n\n\n\n");
+                System.out.println("\n\n");
             audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\YOU DIED (HD).wav");
 
             
             while(true){ 
-                System.out.println("\n\n\n\n");
+                System.out.println("\n");
                 System.out.println("\033[31m" + 
             "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
             "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
@@ -206,7 +203,7 @@ public class MainGame {
                         return; // Exit the game
                     } else{
                         objClear.clearScreen();
-                        System.out.println("\t\t\t\tInvalid Choice. Try Again!");
+                        
                     }
                 }catch(Exception e){
                     objClear.clearScreen();
@@ -220,18 +217,11 @@ public class MainGame {
             objWallTwo.wallTwo(playerCharacter, objIn);
 
             if (playerCharacter.getDefeated()) {
-                System.out.println("\n\n\n\n");
-                System.out.println("\033[31m" + 
-            "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
-            "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
-            "\t\t\t\t\t██║  ██║█████╗  █████╗  █████╗  ███████║   ██║   █████╗  ██║  ██║\n" +
-            "\t\t\t\t\t██║  ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\n" +
-            "\t\t\t\t\t██████╔╝███████╗██║     ███████╗██║  ██║   ██║   ███████╗██████╔╝\n" +
-            "\t\t\t\t\t╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\033[0m \n\n\n\n\n\n\n\n\n");
+                System.out.println("\n");
             audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\YOU DIED (HD).wav");
             
             while(true){ 
-                System.out.println("\n\n\n\n");
+                System.out.println("\n");
                 System.out.println("\033[31m" + 
             "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
             "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
@@ -255,7 +245,7 @@ public class MainGame {
                         return; // Exit the game
                     } else{
                         objClear.clearScreen();
-                        System.out.println("\t\t\t\tInvalid Choice. Try Again!");
+                        
                     }
                 }catch(Exception e){
                     objClear.clearScreen();
@@ -269,18 +259,11 @@ public class MainGame {
             objWallThree.wallThree(playerCharacter, objIn);
 
             if (playerCharacter.getDefeated()) {
-                System.out.println("\n\n\n\n");
-                System.out.println("\033[31m" + 
-            "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
-            "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
-            "\t\t\t\t\t██║  ██║█████╗  █████╗  █████╗  ███████║   ██║   █████╗  ██║  ██║\n" +
-            "\t\t\t\t\t██║  ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\n" +
-            "\t\t\t\t\t██████╔╝███████╗██║     ███████╗██║  ██║   ██║   ███████╗██████╔╝\n" +
-            "\t\t\t\t\t╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\033[0m \n\n\n\n\n\n\n\n\n");
+                System.out.println("\n");
             audioManager.playAudio("C:\\Users\\Prince Tabanas\\Documents\\WALLS 1\\textBasedgame-master\\OST\\YOU DIED (HD).wav");
             
             while(true){ 
-                System.out.println("\n\n\n\n");
+                System.out.println("\n");
                 System.out.println("\033[31m" + 
             "\t\t\t\t\t██████╗ ███████╗███████╗███████╗ █████╗ ████████╗███████╗██████╗\n" +
             "\t\t\t\t\t██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n" +
@@ -308,7 +291,7 @@ public class MainGame {
                     }
                 }catch(Exception e){
                     objClear.clearScreen();
-                    System.out.println("\t\t\t\tError " + e);
+                    
                     scan.nextLine();
                 }
             }   
@@ -353,12 +336,12 @@ public class MainGame {
                         return; // Exit the game
                     } else{
                         objClear.clearScreen();
-                        System.out.println("\t\t\t\t\tInvalid Choice. Try Again!");
+                        objPrint.printCentered("\033[31m\tInvalid Choice. Try Again!\033[0m");
                         System.out.println("");
                     }
                 }catch(Exception e){
                     objClear.clearScreen();
-                    System.out.println("Error " + e);
+                    objPrint.printCentered("\033[31mPlease enter a valid number!\n\n\n\033[0m");
                     scan.nextLine();
                 }
             }   
